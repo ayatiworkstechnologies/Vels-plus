@@ -1,112 +1,103 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
-const img = [
-  "/assets/slider_1.webp",
-  "/assets/slider_2.webp",
-  "/assets/slider_3.webp",
-  "/assets/slider_4.webp",
-  "/assets/slider_5.webp",
-  "/assets/slider_6.webp",
-];
+const FoundationsSection = () => {
+  const foundationItems = [
+    {
+      img: "/assets/strong-1.png",
+      text: "Gain a competitive edge in national exams",
+    },
+    {
+      img: "/assets/strong-2.png",
+      text: "Identify their academic aptitude early",
+    },
+    {
+      img: "/assets/strong-3.png",
+      text: "Build confidence in science and mathematics",
+    },
+    {
+      img: "/assets/strong-4.png",
+      text: "Develop long-term academic discipline",
+    },
+  ];
 
-export default function ReelView() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [slidesToShow, setSlidesToShow] = useState(1); // 1 on mobile, 4 on desktop
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
 
-  // Detect screen size and set slidesToShow
-  useEffect(() => {
-    const updateSlidesToShow = () => {
-      if (window.innerWidth >= 1024) {
-        setSlidesToShow(4); // desktop
-      } else {
-        setSlidesToShow(1); // mobile / tablet
-      }
-    };
-
-    updateSlidesToShow();
-    window.addEventListener("resize", updateSlidesToShow);
-    return () => window.removeEventListener("resize", updateSlidesToShow);
-  }, []);
-
-  const maxIndex = Math.max(0, img.length - slidesToShow);
-
-  // Auto-slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [maxIndex]);
-
-  // Clamp index when slidesToShow changes
-  useEffect(() => {
-    if (currentIndex > maxIndex) {
-      setCurrentIndex(maxIndex);
-    }
-  }, [slidesToShow, maxIndex, currentIndex]);
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
 
   return (
-    <motion.section
-      className="bg-white py-16 px-4 text-center"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      viewport={{ once: true }}
-    >
-      <motion.h2
-        className="text-3xl mb-2 primary-title"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-      >
-        The Reel View
-      </motion.h2>
-
-      <motion.p
-        className="text-gray-600 mb-8 secondary-description"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-      >
-        A polished look at what happens between action and cut.
-      </motion.p>
-
-      <motion.div
-        className="max-w-6xl mx-auto overflow-hidden rounded-xl"
-        initial={{ opacity: 0, scale: 0.97 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-      >
-        {/* Slider track */}
+    <section className="bg-white py-20 px-6 font-primary">
+      <div className="max-w-7xl mx-auto text-center">
+        
+        {/* Header */}
         <motion.div
-          className="flex"
-          animate={{
-            x: `-${currentIndex * (100 / slidesToShow)}%`,
-          }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
         >
-          {img.map((src, i) => (
-            <div
-              key={i}
-              style={{ flex: `0 0 ${100 / slidesToShow}%` }}
-              className="p-2"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={src}
-                  alt={`Reel View ${i + 1}`}
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
-          ))}
+          <h2 className="text-5xl md:text-4xl font-primary font-semibold text-gray-900 mb-6 tracking-tight">
+            Strong Foundations for Academic Excellence
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-4 text-gray-600 font-secondary font-light text-lg leading-relaxed">
+            <p>
+              VELS Plus provides specially designed foundation programs that prepare
+            </p>
+            <p>
+              students early for competitive exams like NEET and IIT-JEE.
+            </p>
+          </div>
         </motion.div>
 
-      </motion.div>
-    </motion.section>
+        {/* 4-Image Grid */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+        >
+          {foundationItems.map((item, index) => (
+            <motion.div 
+              key={index}
+              variants={itemVariants}
+              className="relative group overflow-hidden h-[400px]"
+            >
+              {/* Image */}
+              <Image
+                src={item.img}
+                alt={item.text}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              {/* Dark Overlay Gradient (matches the image) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+              {/* Bottom Text Overlay */}
+              <div className="absolute bottom-0 left-0 w-full p-6 text-left">
+                <p className="text-white text-lg md:text-xl font-primary font-light leading-snug">
+                  {item.text}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
-}
+};
+
+export default FoundationsSection;

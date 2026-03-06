@@ -8,57 +8,37 @@ export default function Footer() {
   return (
     <footer className="mt-20 border-t border-black/10 bg-white secondary-title">
       {/* TOP LINK AREA */}
-      <div className="w-full max-w-7xl mx-auto px-6 pt-8 pb-4">
+      <div className="w-full max-w-4xl mx-auto px-6 pt-8 pb-4">
         <div className="space-y-4 text-center text-lg sm:text-lg text-black/80">
           {/* Row 1 – 4 items, evenly spaced */}
           <div className="grid grid-cols-2 text-lg sm:grid-cols-4 gap-y-2">
             <Link
-              href="/theatre"
-              className="hover:text-[#2A1C79] transition-colors"
-            >
-              Vels Theatre
-            </Link>
-            <Link
-              href="/indoor"
-              className="hover:text-[#2A1C79] transition-colors"
-            >
-              Vels Film City - Indoor
-            </Link>
-            <Link
-              href="/outdoor"
-              className="hover:text-[#2A1C79] transition-colors"
-            >
-              Vels Film City - Outdoor
-            </Link>
-            <Link
-              href="#getting"
-              className="hover:text-[#2A1C79] transition-colors"
-            >
-              Getting to VELS
-            </Link>
-          </div>
-
-          {/* Row 2 – 3 items, centered */}
-          <div className="grid grid-cols-3 gap-y-2 max-w-xs text-md mx-auto pt-10 pb-5">
-            <Link
-              href="/about"
+              href="#"
               className="hover:text-[#2A1C79] transition-colors"
             >
               About
             </Link>
             <Link
-              href="/faq"
+              href="#"
               className="hover:text-[#2A1C79] transition-colors"
             >
-              FAQ'S
+              Philosophy
             </Link>
             <Link
-              href="/contact"
+              href="#"
               className="hover:text-[#2A1C79] transition-colors"
             >
-              Contact
+              Academic Programs
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-[#2A1C79] transition-colors"
+            >
+              Facilities
             </Link>
           </div>
+
+         
         </div>
       </div>
 
@@ -67,7 +47,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between text-lg sm:text-lg text-black/70">
           {/* Left: Copyright */}
           <p className="md:basis-1/3 text-center md:text-left">
-            © Copyright Vels Trade Convention Centre 2025
+            © Copyright Vels Plus 2026
           </p>
 
           {/* Center: Privacy / Terms */}

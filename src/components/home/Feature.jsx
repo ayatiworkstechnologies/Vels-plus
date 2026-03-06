@@ -30,7 +30,7 @@ const Feature = () => {
         >
           {/* ✅ Actual size image (no cropping, responsive) */}
           <img
-            src="/assets/trade_convention_centre.webp"
+            src="/assets/intro.png"
             alt="Vels Trade and Convention Centre"
             className="w-auto h-auto max-w-full max-h-[500px] rounded-lg object-contain"
             loading="lazy"
@@ -46,33 +46,20 @@ const Feature = () => {
           viewport={{ once: true }}
         >
           <h2 className="  primary-title text-black mb-3">
-            The Landmark Where Scale <br /> Meets Splendour 
+            A Warm Welcome to VELS  <br /> Group of Institutions 
           </h2>
           <div className="w-40 h-[0.5px] bg-[#2D3091] mb-6 mt-4"></div>
           <p className="text-gray-700 secondary-description mb-5">
-            Step into Vels Trade & Convention Centre, South India’s premier 3.5
-            lakh sq. ft. privately owned trade hub, designed to inspire awe and
-            redefine ambition. A masterpiece of architecture, acoustics, and
-            aesthetics, it stands as Tamil Nadu’s first privately owned trade
-            centre, setting new benchmarks for how events are imagined,
-            experienced, and remembered.
+           VELS Group is a leading private educational conglomerate in Tamil Nadu, nurturing thousands of students every year through world-class institutions and innovative academic programs.
           </p>
 
-          <h3 className="secondary-highlight text-black text-4xl mb-3">
-            Think Bigger. Experience Better. Create Beyond.
+          <h3 className="secondary-light text-black text-3xl mb-3">
+           Founded by Dr. Ishari K. Ganesh in 1992, the VELS Group has grown into a major educational network with
           </h3>
 
-          <p className="text-gray-700 secondary-description mb-4">
-            When others measure in square feet, we measure in possibilities. At
-            nearly four times the size of the Chennai Trade & Convention Centre,
-            VELS offers an expansive canvas for every vision, from boutique
-            gatherings to world-class exhibitions, from corporate milestones to
-            cultural grandeur. 
-          </p>
+        
 
-          <p className="text-gray-700 secondary-description ">
-            VELS is where scale transforms into sophistication. 
-          </p>
+          
         </motion.div>
       </div>
     </section>

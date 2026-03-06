@@ -1,221 +1,155 @@
-// app/components/Facilities.jsx
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const ROTATE_MS = 4000;
-
-const facilities = [
-  {
-    title: "Restaurants",
-    desc: "Indulge in a range of cuisines at our on-site and nearby restaurants, perfect for guests, performers, and crew seeking comfort and flavour between events.",
-    image: "/assets/restaurants.webp",
-  },
-  {
-    title: "ATM Facility",
-    desc: "Convenient on-premises banking and cash withdrawal services to keep transactions smooth and stress-free.",
-    image: "/assets/atm_facility.webp",
-  },
-  {
-    title: "Makeup Rooms",
-    desc: "Spacious, well-lit rooms with mirrors, dressing areas, and ample storage, ideal for artists, performers, and wedding preparations.",
-    image: "/assets/makeup_rooms.webp",
-  },
-  {
-    title: "Cafeterias and Food Court",
-    desc: "Freshly prepared meals, snacks, and beverages catering to diverse palates and dietary preferences, because every break deserves great taste.",
-    image: "/assets/cafeterias_and_food_court.webp",
-  },
-  {
-    title: "Lavatories",
-    desc: "Clean, well-maintained, and fully equipped restrooms designed for both male and female guests, ensuring comfort throughout the event.",
-    image: "/assets/lavatories.webp",
-  },
+const workshops = [
+  "National Talent Search Examination – NTSE (Stage 1 & Stage 2)",
+  "National Standard Examination in Junior Science - NSEJS",
+  "International Junior Science Olympiad - IJSO.",
+  "International Mathematical Olympiad - IMO.",
+  "Workshops for various Science & Maths Olympiads.",
+  "National Mathematics Talent Contest (NMTC).",
+  "TECHNOTHLON, conducted by IIT Guwahati, INDIA.",
+  "Regional Mathematical Olympiad – RMO.",
 ];
 
-// Animations
-const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
-const listParent = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.15 } },
-};
-
-const listItem = {
-  hidden: { opacity: 0, x: -20 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.45 } },
-};
-
-export default function Facilities() {
+export default function AcademicWorkshops() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const timerRef = useRef(null);
 
-  const activeFacility = facilities[active];
-
-  // Autoplay rotation (both desktop and mobile; pause on hover)
+  // Auto-rotate the active workshop every 3 seconds
   useEffect(() => {
-    if (paused) return;
-    if (timerRef.current) clearInterval(timerRef.current);
+    const interval = setInterval(() => {
+      setActive((prev) => (prev + 1) % workshops.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-    timerRef.current = setInterval(() => {
-      setActive((i) => (i + 1) % facilities.length);
-    }, ROTATE_MS);
-
-    return () => clearInterval(timerRef.current);
-  }, [paused]);
-
-  const goPrev = () => {
-    setActive((prev) => (prev - 1 + facilities.length) % facilities.length);
-  };
-
-  const goNext = () => {
-    setActive((prev) => (prev + 1) % facilities.length);
-  };
-
-  return (
-    <section
-      className="mx-auto max-w-6xl px-4 py-16"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      {/* Heading */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
-        className="mb-10"
-      >
-        <h2 className="text-3xl sm:text-4xl tracking-tight text-black primary-title">
-          All About Vel Conventional Centre
+  return ( <>
+    <section className="mx-auto max-w-7xl px-6 py-24 bg-white font-primary overflow-hidden">
+      {/* Main Section Heading */}
+      <div className="mb-16">
+        <h2 className="text-4xl md:text-5xl font-serif text-gray-900 tracking-tight">
+          Academic Excellence Workshops
         </h2>
-        <p className="mt-4 sm:mt-5 text-black/70 secondary-description text-base sm:text-lg">
-          Everything your guests could need thoughtfully within reach.
-        </p>
-      </motion.div>
-
-      {/* ================= DESKTOP / TABLET (md and up) ================= */}
-      <div className="hidden md:grid items-start gap-10 md:grid-cols-2">
-        {/* LEFT LIST (Animated Stagger) */}
-        <motion.div
-          variants={listParent}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col gap-4"
-        >
-          {facilities.map((item, i) => {
-            const isActive = i === active;
-            return (
-              <motion.button
-                key={item.title}
-                variants={listItem}
-                onClick={() => setActive(i)}
-                className={[
-                  "text-left rounded-md p-5 transition",
-                  isActive
-                    ? "bg-black/[0.04] shadow-sm ring-1 ring-black/10"
-                    : "hover:bg-black/[0.03]",
-                ].join(" ")}
-              >
-                <h3 className="primary-subtitle text-xl text-black">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-md leading-relaxed text-black/70 secondary-description">
-                  {item.desc}
-                </p>
-              </motion.button>
-            );
-          })}
-        </motion.div>
-
-        {/* RIGHT IMAGE WITH TRUE ASPECT + FADE */}
-        <div className="relative w-full flex justify-center items-center overflow-hidden rounded-lg">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, scale: 1.04 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.04 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-full h-auto flex justify-center items-center"
-            >
-              <div className="relative w-full max-w-[600px]">
-                <Image
-                  src={activeFacility.image}
-                  alt={activeFacility.title}
-                  width={590}
-                  height={726}
-                  className="w-full h-auto object-contain rounded-lg"
-                  priority
-                />
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
       </div>
 
-      {/* ================= MOBILE (below md) ================= */}
-      <div className="md:hidden">
-        {/* TEXT CONTENT FIRST */}
-        <div className="mb-5">
-          <h3 className="primary-subtitle text-lg sm:text-xl text-black mb-2">
-            {activeFacility.title}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        {/* LEFT SIDE: Auto-Highlighting List */}
+        <div className="space-y-6">
+          <h3 className="text-xl font-bold uppercase tracking-widest text-gray-800 mb-8">
+            VELS ORGANISE WORKSHOPS FOR :
           </h3>
-          <p className="secondary-description text-sm leading-relaxed text-black/75">
-            {activeFacility.desc}
-          </p>
+          
+          <div className="relative flex flex-col gap-2">
+            {workshops.map((item, i) => {
+              const isActive = i === active;
+              return (
+                <div
+                  key={i}
+                  className="relative cursor-pointer py-3 px-6"
+                  onClick={() => setActive(i)}
+                >
+                  {/* Sliding Highlight Background */}
+                  {isActive && (
+                    <motion.div
+                      layoutId="highlight"
+                      className="absolute inset-0 bg-gray-50 border-l-4 border-[#303395] z-0"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+
+                  {/* Workshop Text */}
+                  <motion.p
+                    animate={{ 
+                      x: isActive ? 10 : 0,
+                      color: isActive ? "#000000" : "#6B7280"
+                    }}
+                    className={`relative z-10 text-lg font-secondary font-light transition-colors duration-500 ${
+                      isActive ? "font-medium" : ""
+                    }`}
+                  >
+                    {item}
+                  </motion.p>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
-        {/* IMAGE SLIDER BELOW CONTENT */}
-        <div className="relative w-full overflow-hidden rounded-lg shadow-sm">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.35 }}
-              className="w-full"
-            >
-              <Image
-                src={activeFacility.image}
-                alt={activeFacility.title}
-                width={590}
-                height={726}
-                className="w-full h-auto object-cover rounded-lg"
-                priority
-              />
-            </motion.div>
-          </AnimatePresence>
+        {/* RIGHT SIDE: Framed Static Image */}
+        <div className="relative flex justify-center items-center lg:justify-end">
+          {/* Decorative Framing Lines */}
+      
 
-          {/* Left / Right arrows */}
-          <button
-            type="button"
-            onClick={goPrev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 rounded-full w-8 h-8 flex items-center justify-center text-sm shadow-md"
+          {/* Fixed-Size Image Container (589x559) */}
+          <div 
+            className="relative z-10  overflow-hidden  flex-shrink-0"
+            style={{ width: '589px', height: '559px' }}
           >
-            ❮
-          </button>
-          <button
-            type="button"
-            onClick={goNext}
-            className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 rounded-full w-8 h-8 flex items-center justify-center text-sm shadow-md"
-          >
-            ❯
-          </button>
+            <Image
+              src="/assets/workshop.png" 
+              alt="Academic Excellence Workshop"
+              fill
+              className="object-cover"
+              sizes="589px"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
+       <section className="bg-white py-12 px-6 font-primary">
+          <div className="max-w-5xl mx-auto text-center">
+            
+            {/* Main Heading */}
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-4xl font-primary text-gray-900 mb-10 tracking-[0.05em] uppercase"
+            >
+              NEET & JEE (Mains & Advanced)
+            </motion.h2>
+    
+            {/* Description Block */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="space-y-2 text-[#4a4a4a] font-secondary font-light text-lg md:text-md tracking-[0.05em]"
+            >
+              <p>
+                VELS has long been distinguished for the best preparatory courses and results for Medical (NEET) & 
+              </p>
+              <p>
+               Engineering (IIT-JEE) entrance examinations. We offer methodical coaching and a healthy competitive 
+              </p>
+              <p>
+                atmosphere to the aspirants through our excellent curriculum. The study material which has been prepared by our 
+              </p>
+              <p>
+                well versed faculties after extensive research is comprehensive and simple to understand. The specially tailored curriculum takes care of board examinations simultaneously.
+              </p>
+            </motion.div>
+    
+            {/* Bottom Accent Line (Optional, matches institutional style) */}
+            <motion.div 
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="mt-12  mx-auto"
+            />
+    
+          </div>
+        </section>
+  </>
+  
   );
 }

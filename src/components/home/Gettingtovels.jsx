@@ -5,26 +5,38 @@ import { motion } from "framer-motion";
 
 /* Replace with your real files */
 const ITEMS = [
-  { icon: "/assets/plane.svg", title: "4KM", sub: "from the airport" },
+
   {
-    icon: "/assets/plane.svg",
-    title: "4KM",
-    sub: "from the upcoming new parandur airport",
+    icon: "/assets/icons/jee-1.png",
+    title: "Two level exam",
+    sub: "(1) JEE Mains (2) JEE Advanced",
   },
   {
-    icon: "/assets/train.svg",
-    title: "4KM",
-    sub: "from the upcoming new thirumazhisai metro",
+    icon: "/assets/icons/jee-2.png",
+    sub: "JEE Main conducted by NTA and \nJEE Advanced conducted by IITs",
   },
   {
-    icon: "/assets/bus.svg",
-    title: "MTC Buses to VELS City",
-    sub: "Monday – Sunday, from 6 AM – 9 PM",
+    icon: "/assets/icons/jee-3.png",
+    title: "Subjects",
+    sub: "Chemistry, Physics, Maths",
   },
   {
-    icon: "/assets/car.svg",
-    title: "Seamlessly navigable",
-    sub: "on all map apps",
+    icon: "/assets/icons/jee-4.png",
+    title: "Syllabus",
+    sub: "11th and 12th according to  NCERT",
+  },
+  {
+    icon: "/assets/icons/jee-5.png",
+    title: "JEE Main pattern",
+    sub: "25 MCQ (4 options, 1 correct) & 10 Numerical answer based question per subject. Out of 10 numerical only 5 are to be attempted",
+  },
+   {
+    icon: "/assets/icons/jee-6.png",
+    sub: "Right attempt: +4, Wrong attempt: -1, \nNot Attempted: 0",
+  },
+ {
+    icon: "/assets/icons/jee-7.png",
+    sub: "JEE Main score gives eligibility for admission to NITs, IIITs and many other GFTIies & PRIVATE ENGINEERING COLLEGES.",
   },
 ];
 
@@ -60,45 +72,14 @@ export default function GettingToVels() {
           viewport={{ once: true, margin: "-100px" }}
           className="primary-title text-[28px] md:text-[40px] leading-tight text-black"
         >
-          Getting to VELS
+          JEE - (Joint Entrance Exam)
         </motion.h2>
 
-        {/* Paragraph */}
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="mt-3 max-w-3xl text-[15px] md:text-lg text-black/70 primary-description"
-        >
-          Strategically set in the heart of Chennai, VELS offers effortless
-          access from key business, cultural, and transport hubs, making every
-          arrival as seamless as every event. 
-        </motion.p>
+       
 
         {/* Layout */}
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <motion.div
-            className="relative overflow-hidden shadow-md aspect-square "
-            initial={{ opacity: 0, scale: 1.03 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <iframe
-              title="VELS City Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.98047056669!2d80.0456360738114!3d13.036915013445475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528b475a4ddbaf%3A0xbf23d710d8e78aaa!2sVELS%20Trade%20%26%20Convention%20Centre!5e0!3m2!1sen!2sin!4v1763122190448!5m2!1sen!2sin%22"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 w-full h-full "
-            ></iframe>
-          </motion.div>
-
-          {/* RIGHT: Icon List */}
+             {/* RIGHT: Icon List */}
           <motion.ul
             variants={listParent}
             initial="hidden"
@@ -122,13 +103,32 @@ export default function GettingToVels() {
                   <div className="font-bold text-black">
                     {it.title}
                   </div>
-                  <div className="secondary-description text-[12.5px] md:text-lg text-black/70">
+                 <div className="mt-4 secondary-description text-[12.5px] md:text-lg text-black/70 whitespace-pre-line">
                     {it.sub}
                   </div>
                 </div>
               </motion.li>
             ))}
           </motion.ul>
+       <motion.div
+  className="relative overflow-hidden flex-shrink-0"
+  initial={{ opacity: 0, scale: 1.03 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: true }}
+  style={{ width: '540px', height: '548px' }}
+>
+  <Image
+    src="/assets/jee.png" 
+    alt="VELS City Location Map"
+    fill
+    className="object-cover"
+    sizes="540px"
+    priority
+  />
+</motion.div>
+
+       
         </div>
       </div>
     </section>

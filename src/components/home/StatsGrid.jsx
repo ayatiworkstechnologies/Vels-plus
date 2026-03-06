@@ -4,17 +4,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 // Icons
-import icon1 from "@/public/assets/icons/block.svg";
-import icon2 from "@/public/assets/icons/arrow.svg";
-import icon3 from "@/public/assets/icons/location.svg";
-import icon4 from "@/public/assets/icons/car.svg";
+import icon1 from "@/public/assets/icons/institutions.png";
+import icon2 from "@/public/assets/icons/campuses.png";
+import icon3 from "@/public/assets/icons/students.png";
+import icon4 from "@/public/assets/icons/faculty.png";
 
 // Stat Data
 const statsData = [
-  { value: "4", label: "Number of Blocks", icon: icon1 },
-  { value: "3.5 L sq. ft.", label: "Total Space", icon: icon3 },
-  { value: "50 ft", label: "Ceiling Height", icon: icon2 },
-  { value: "6000+", label: "Car Parkings", icon: icon4 }, // updated value as requested earlier
+  { value: "52", label: "Institutions", icon: icon1 },
+  { value: "34", label: "Campuses", icon: icon3 },
+  { value:"48,000 +", label: "Students", icon: icon2 },
+  { value: "7,700+", label: "Faculty & Staffs", icon: icon4 }, // updated value as requested earlier
 ];
 
 // Animation Variants
