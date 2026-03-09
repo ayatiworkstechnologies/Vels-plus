@@ -31,7 +31,7 @@ const Feature = () => {
         >
           {/* ✅ Actual size image (no cropping, responsive) */}
           <img
-            src="/assets/intro.png"
+            src="/assets/intro-img.png"
             alt="Vels Trade and Convention Centre"
             className="w-auto h-auto max-w-full max-h-[500px] rounded-lg object-contain"
             loading="lazy"
