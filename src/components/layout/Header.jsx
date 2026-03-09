@@ -24,7 +24,7 @@ export default function Header() {
             <Image
               src={velsLogo}
               alt="VELS Logo"
-              width={220}
+              width={320}
               height={60}
               priority
               className="object-contain"
@@ -48,7 +48,7 @@ export default function Header() {
         target="_blank"
         className="fixed right-[-60px] top-1/2 -translate-y-1/2 z-50 rotate-90"
       >
-        <div className="bg-primary text-white font-semibold px-6 py-3 shadow-lg hover:bg-red-700 transition-all rounded-b-lg">
+        <div className="bg-primary text-white font-semibold px-6 py-3 shadow-lg transition-all rounded-b-lg">
           Admission Open
         </div>
       </Link>
