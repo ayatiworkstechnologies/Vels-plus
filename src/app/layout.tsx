@@ -35,8 +35,8 @@ const Baskervville = localFont({
 });
 
 // --- METADATA API (Next.js-Idiomatic SEO) ---
-const siteTitle = "Vels Trade and Convenience Center";
-const siteDescription = "Vels Film City is the most spacious media and entertainment hub of Chennai with 20 Film Studios, a 6 Screen Multiplex, Hotel rooms and coming up with Chennai's";
+const siteTitle = "Vels Plus";
+const siteDescription = "";
 const siteUrl = 'https://yourwebsite.com';
 const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
 

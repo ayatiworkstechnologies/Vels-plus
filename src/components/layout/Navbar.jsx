@@ -92,7 +92,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex justify-center">
-            <Link href="/academic" className={linkClasses("/academic")}>
+            <Link href="#" className={linkClasses("/academic")}>
               Academic Programs
             </Link>
           </div>
