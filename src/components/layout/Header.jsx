@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,7 +27,7 @@ export default function Header() {
         </header>
     );
 }
-=======
+
 "use client";
 import Link from "next/link";
 import Image from "next/image";
@@ -55,4 +55,3 @@ export default function Header() {
         </header>
     );
 }
->>>>>>> 32e52c9569697af9ba2ca94821b85f3a04e4cc72
