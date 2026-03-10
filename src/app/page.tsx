@@ -25,9 +25,10 @@ export default function Home() {
                 
                 {/* Components rendered globally (will appear on ALL pages) */}
                 <Hero />
+                 <Welcome />
                 <Feature />
-                <Welcome />
-                <StatsGrid />
+               
+                {/* <StatsGrid /> */}
                 <FounderSection />
                 <WhyChooseSection />
                 <ReelView />

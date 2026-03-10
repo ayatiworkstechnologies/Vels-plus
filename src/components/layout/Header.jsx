@@ -27,7 +27,7 @@ export default function Header() {
               <Image
                 src={velsLogo}
                 alt="VELS Logo"
-                width={220}
+                width={120}
                 height={60}
                 priority
                 className="object-contain"
