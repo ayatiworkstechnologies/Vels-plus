@@ -9,28 +9,12 @@ const NeetSection = () => {
     <section className="bg-white py-16 lg:py-20 px-4 sm:px-6 font-primary">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
 
-        {/* Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="relative w-full max-w-md lg:max-w-[540px] h-[350px] sm:h-[450px] lg:h-[548px] shadow-lg"
-        >
-          <Image
-            src="/assets/neet.png"
-            alt="NEET Aspirations"
-            fill
-            className="object-cover rounded-sm"
-            priority
-          />
-        </motion.div>
-
-        {/* Content */}
+        {/* Content FIRST on mobile */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="flex flex-col space-y-8 lg:space-y-10"
+          className="flex flex-col space-y-8 lg:space-y-10 order-1 lg:order-2"
         >
 
           {/* Title */}
@@ -90,6 +74,22 @@ const NeetSection = () => {
             </div>
           </div>
 
+        </motion.div>
+
+        {/* Image SECOND on mobile */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="relative w-full max-w-md lg:max-w-[540px] h-[350px] sm:h-[450px] lg:h-[548px] shadow-lg order-2 lg:order-1"
+        >
+          <Image
+            src="/assets/neet.png"
+            alt="NEET Aspirations"
+            fill
+            className="object-cover rounded-sm"
+            priority
+          />
         </motion.div>
 
       </div>
