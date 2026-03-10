@@ -32,7 +32,7 @@ const mobileSlides = [
     alt: "Mobile Banner 2",
   },
   {
-    img: "/assets/banner/mo-3.jpg",
+    img: "/assets/banner/mob-3.jpg",
     alt: "Mobile Banner 3",
   },
 ];
