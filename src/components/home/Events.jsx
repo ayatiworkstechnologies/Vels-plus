@@ -9,11 +9,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const PURPLE = "bg-[#2A1C79]";
 
 const events = [
-  { id: 1, tag: "Exhibition", title: "Manufacturer Meeting", date: "16th July 2025", image: "/assets/event-1.webp", href: "#" },
-  { id: 2, tag: "Exhibition", title: "2020–2025 Traders Meeting", date: "14th May 2025", image: "/assets/event-2.webp", href: "#" },
-  { id: 3, tag: "Convention", title: "Creative Awards (South Zone)", date: "12th June 2025", image: "/assets/event-3.webp", href: "#" },
-  { id: 4, tag: "Convention", title: "Creative Awards (National)", date: "12th June 2025", image: "/assets/event-1.webp", href: "#" },
-  { id: 5, tag: "Summit", title: "Design & Innovation Summit", date: "22nd Aug 2025", image: "/assets/event-2.webp", href: "#" },
+  { id: 1, tag: "Student Achievement Awards", title: "Outstanding students were recognized for their dedication and academic accomplishments.", date: "Explore more", image: "/assets/event-1.webp", href: "#" },
+  { id: 2, tag: "New Learning Programs", title: "VELS Plus introduces advanced foundation programs for NEET and IIT-JEE preparation.", date: "Explore more", image: "/assets/event-2.webp", href: "#" },
+  { id: 3, tag: "Science Workshop Event", title: "Interactive workshops designed to strengthen scientific knowledge and practical skills.", date: "Explore more", image: "/assets/event-3.webp", href: "#" },
+  { id: 4, tag: "Academic Enrichment Program", title: "Engaging activities conducted to develop analytical skills and academic confidence.", date: "Explore more", image: "/assets/event-1.webp", href: "#" },
+
 ];
 
 export default function EventsExact() {
@@ -60,7 +60,7 @@ export default function EventsExact() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-16" id="events">
-      <h2 className="mb-10 text-center text-4xl tracking-tight primary-title">Events</h2>
+      <h2 className="mb-10 text-center text-4xl tracking-tight primary-title">News & Events</h2>
 
       <div className="relative">
         <div
@@ -126,9 +126,15 @@ export default function EventsExact() {
                         {ev.title}
                       </h3>
                        
-                      <p className={isActive ? "text-lg text-black secondary-subtitle" : "text-lg text-black/40 secondary-subtitle"}>
-                        {ev.date}
-                      </p>
+                     <button
+                      className={
+                        isActive
+                          ? "text-sm px-4 py-2 bg-primary text-white"
+                          : "text-sm px-4 py-2 bg-gray-200 text-gray-600"
+                      }
+                    >
+                      {ev.date}
+                    </button>
                     </div>
                   </div>
                 </article>

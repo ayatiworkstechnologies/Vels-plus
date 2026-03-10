@@ -5,6 +5,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Navbar from '../components/layout/Navbar'; 
 import ScrollToTop from '../components/layout/ScrollToTop';
+import FloatingIcons from '../components/FloatingIcons';
 import type { ReactNode } from "react";
 import localFont from "next/font/local";
 import CanonicalLink from '../components/layout/CanonicalLink'; // Assuming this component exists
@@ -77,6 +78,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <Navbar />
                 {/* Main content area (This is where app/page.jsx or any other page component renders) */}
                 <main className="">{children}</main>
+                <FloatingIcons />
                 <ScrollToTop />
                 <Footer />
             </body>

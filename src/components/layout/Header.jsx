@@ -3,19 +3,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
 
-import velsLogo from "@/public/assets/logo.svg";
+import velsLogo from "@/public/assets/vels-plus-logo.svg";
 
 export default function Header() {
   return (
     <>
-      <header className="w-full bg-white border-b">
+      <header className="w-full bg-primary border-b">
         <div className="max-w-7xl mx-auto px-4 py-4">
 
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between">
 
             {/* Phone */}
-            <div className="flex items-center gap-2 text-primary text-sm">
+            <div className="flex items-center gap-2 text-white text-sm">
               <Phone size={18} />
               <a href="tel:+918925905619" className="hover:text-blue-600">
                 +91 89259 05619
@@ -27,7 +27,7 @@ export default function Header() {
               <Image
                 src={velsLogo}
                 alt="VELS Logo"
-                width={320}
+                width={220}
                 height={60}
                 priority
                 className="object-contain"
@@ -35,7 +35,7 @@ export default function Header() {
             </Link>
 
             {/* Email */}
-            <div className="flex items-center gap-2 text-primary text-sm">
+            <div className="flex items-center gap-2 text-white text-sm">
               <Mail size={18} />
               <a href="mailto:vgs@velsgroup.in" className="hover:text-blue-600">
                 vgs@velsgroup.in
@@ -83,16 +83,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Sticky Admission Band */}
-      <Link
-        href="https://erp.vistas.ac.in/velsonline/applicationschools/loginManager/applicantRegistrationVGS.jsp"
-        target="_blank"
-        className="fixed right-[-55px] md:right-[-60px] top-1/2 -translate-y-1/2 z-50 rotate-90"
-      >
-        <div className="bg-primary text-white font-semibold px-6 py-3 shadow-lg rounded-b-lg text-sm md:text-base">
-          Admission Open
-        </div>
-      </Link>
+    
     </>
   );
 }

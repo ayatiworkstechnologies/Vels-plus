@@ -38,40 +38,40 @@ export default function TestimonialsCarousel() {
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
 
-  const testimonials = [
-    {
-      id: 1,
-      quote:
-        "A remarkable venue featuring premier facilities. The size and adaptability ensured our event ran flawlessly.",
-      name: "Priya",
-      role: "CEO, of OMG Event Organizing.",
-      image: "/assets/testimonial-1.webp",
-    },
-    {
-      id: 2,
-      quote:
-        "The atmosphere, layout, and support surpassed our expectations. Our attendees were extremely satisfied.",
-      name: "Ruban",
-      role: "CMO, Producer of Agarwal Movies",
-      image: "/assets/testimonial.webp",
-    },
-    {
-      id: 4,
-      quote:
-        "The infrastructure, ambiance, and coordination exceeded our requirements. Our delegates were thoroughly impressed throughout.",
-      name: "Ramya",
-      role: "Corporate Planner",
-      image: "/assets/girl.png",
-    },
-    {
-      id: 3,
-      quote:
-        "An exceptional space with outstanding amenities. The professional team and versatile setup made our product launch truly memorable.",
-      name: "Balaji",
-      role: "Marketing Director",
-      image: "/assets/boy.png",
-    },
-  ];
+const testimonials = [
+  {
+    id: 1,
+    quote:
+      "VELS Plus helped me improve my confidence and marks significantly. The teachers explain every concept clearly and give personal attention to each student. The regular tests and feedback really helped me prepare better for my board exams.",
+    name: "A. Archana",
+    role: "Class 12 Student",
+    image: "/assets/testimonial-1.webp",
+  },
+  {
+    id: 2,
+    quote:
+      "As a parent, I am very happy with the guidance my child receives at VELS Plus. The teachers are supportive, disciplined, and focused on academic growth. I can see a big improvement in my child's understanding and performance.",
+    name: "S. Ramesh",
+    role: "Parent",
+    image: "/assets/testimonial.webp",
+  },
+  {
+    id: 3,
+    quote:
+      "The learning environment at VELS Plus is very motivating. The faculty members are knowledgeable and always ready to help. The study materials and test series provided by the academy are extremely useful.",
+    name: "Kavya S",
+    role: "Class 11 Student",
+    image: "/assets/girl.png",
+  },
+  {
+    id: 4,
+    quote:
+      "VELS Plus is one of the best places for students who want strong academic support. The structured classes, revision sessions, and continuous assessments help students stay focused and confident.",
+    name: "Balaji K",
+    role: "Parent",
+    image: "/assets/boy.png",
+  },
+];
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-10 sm:py-14 md:py-16">
@@ -86,12 +86,10 @@ export default function TestimonialsCarousel() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl text-gray-900 primary-title leading-tight">
-              What Our Clients Say
+              What our students & parents say about us
             </h2>
             <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 secondary-description">
-              Vels Trade & Convention Centre stands in Chennai's vibrant core,
-              providing effortless connectivity to the city's premier commercial
-              and cultural destinations.
+              Read the honest reviews and success stories of our top vels plus 
             </p>
           </motion.div>
 

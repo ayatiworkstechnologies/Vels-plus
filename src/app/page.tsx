@@ -15,6 +15,8 @@ import Faqs from "../components/home/Faqs";
 import HoverExpandCarousel from "../components/home/HoverExpandCarousel";
 import TestimonialsCarousel from "../components/home/TestimonialsCarousel";
 import NeetSection from "../components/home/Neet";
+import Blog from "../components/home/Blogs";
+import Welcome from "../components/home/Welcome";
 
 export default function Home() {
   return (
@@ -24,6 +26,7 @@ export default function Home() {
                 {/* Components rendered globally (will appear on ALL pages) */}
                 <Hero />
                 <Feature />
+                <Welcome />
                 <StatsGrid />
                 <FounderSection />
                 <WhyChooseSection />
@@ -31,13 +34,13 @@ export default function Home() {
                 <KeyPoints />
                   <Facilities />
                <NeetSection />
-                {/* <DesignedOccasion /> */}
+            {/* <DesignedOccasion /> */}
                 <Gettingtovels />
                
-                {/* <Events />
-              
+                <Events />
+                 <Blog />
                 <TestimonialsCarousel />
-                <HoverExpandCarousel /> */}
+                {/* <HoverExpandCarousel />  */}
                 {/* <Faqs /> */}
     </>
   );
