@@ -2,16 +2,16 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion"; // ✅ Added for animation
-import imgSrc from "@/public/assets/values.webp";
+import imgSrc from "@/public/assets/value.png";
 
 export default function ValuesSection() {
   const values = [
-    { num: "01", title: "Excellence", desc: "Consistently delivering superior facilities and services for every production." },
-    { num: "02", title: "Innovation", desc: "Embracing the latest technologies to elevate production quality and efficiency." },
-    { num: "03", title: "Collaboration", desc: "Building strong partnerships among filmmakers, crews and creative teams." },
-    { num: "04", title: "Integrity", desc: "Upholding transparency, honesty, and professionalism in all interactions." },
-    { num: "05", title: "Customer Focus", desc: "Anticipating and meeting client needs for a smooth, seamless experience." },
-    { num: "06", title: "Sustainability", desc: "Promoting environmentally responsible practices in all stages of filmmaking." },
+    { num: "01", title: "Excellence", desc: "We strive for the highest standards in education, training, and student development." },
+    { num: "02", title: "Integrity", desc: "We uphold honesty, transparency, and ethical practices in all our academic and institutional activities." },
+    { num: "03", title: "Innovation", desc: "We encourage new ideas, creative thinking, and modern learning approaches." },
+    { num: "04", title: "Student-Centric Learning", desc: " We prioritize the success, growth, and well-being of every student." },
+    { num: "05", title: "Commitment to Society", desc: "We believe education should empower individuals to positively impact their communities and the nation." },
+ 
   ];
 
   return (

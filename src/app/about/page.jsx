@@ -4,6 +4,7 @@ import OurLegacy from "../../components/About/OurLegacy";
 import VisionMission from "../../components/About/VisionMission";
 import Values from "../../components/About/Values";
 import VelsEcosystem from "../../components/About/VelsEcosystem";
+import Slide from "../../components/About/Slide";
 
 
 const siteTitle = "About Us  | Vels Film City Chennai | Media and Entertainment Hub";
@@ -35,9 +36,11 @@ export default function about() {
     <>
         <Hero />
         <OurLegacy />
+         <Slide />
+          <Values />
         <VisionMission />
-        <Values />
-        <VelsEcosystem />
+       
+       
     </>
     
   );

@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import featuredbanner from "@/public/assets/trade_convention_centre.webp";
+import featuredbanner from "@/public/assets/legacy.png";
 import { motion } from "framer-motion"; // ✅ Add this
 
 const OurLegacy = () => {
@@ -57,7 +57,7 @@ const OurLegacy = () => {
             </h2>
             <span className="block w-24 h-px bg-primary mt-5 mb-2" aria-hidden />
             <p className="text-gray-700  secondary-subtitle mt-4">
-             Beyond the silver screen, Vels Trade & Convention Centre stands as Chennai's most advanced event ecosystem, hosting world-class conventions, international trade expos, and landmark cultural celebrations that unite innovation, business, and creativity under one iconic roof.
+             VELS Group of Institutions has built a remarkable legacy of educational excellence since its founding in 1992 by Dr. Ishari K. Ganesh. What began as a small institution with just 36 students has grown into a large educational ecosystem serving tens of thousands of students across multiple campuses. With a strong commitment to academic quality, innovation, and student development, VELS continues to empower learners to achieve their full potential and contribute meaningfully to society.
             </p>
           </div>
         </motion.div>
