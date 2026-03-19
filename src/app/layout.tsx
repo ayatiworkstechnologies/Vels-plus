@@ -75,7 +75,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <body className="bg-white text-gray-900 font-sans">
                 
                <Header />
-                <Navbar />
                 {/* Main content area (This is where app/page.jsx or any other page component renders) */}
                 <main className="">{children}</main>
                 <FloatingIcons />

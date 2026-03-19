@@ -54,7 +54,7 @@ const FounderSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row bg-white shadow-xl rounded-sm overflow-hidden"
+          className="flex flex-col md:flex-row bg-white shadow-xl rounded-xl overflow-hidden border-2 border-white"
         >
           {/* Left: Image */}
           <motion.div variants={fadeInUp} className="md:w-1/2 relative h-[500px]">

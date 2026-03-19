@@ -67,20 +67,20 @@ const FoundationsSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 "
         >
           {foundationItems.map((item, index) => (
             <motion.div 
               key={index}
               variants={itemVariants}
-              className="relative group overflow-hidden h-[400px]"
+              className="relative group overflow-hidden h-[400px] rounded-xl border-2 borde-white"
             >
               {/* Image */}
               <Image
                 src={item.img}
                 alt={item.text}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                className="object-cover transition-transform duration-700 group-hover:scale-110 "
               />
 
               {/* Dark Overlay Gradient (matches the image) */}

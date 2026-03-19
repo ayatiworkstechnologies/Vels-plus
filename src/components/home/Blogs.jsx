@@ -95,7 +95,7 @@ export default function BlogSection() {
           {/* Left Latest Blog */}
           <div>
             <article className="group">
-              <div className="overflow-hidden rounded-sm">
+              <div className="overflow-hidden rounded-2xl">
                 <img
                   src={latestBlog.image}
                   alt={latestBlog.title}
@@ -132,7 +132,7 @@ export default function BlogSection() {
                     key={`${blog.id}-${index}`}
                     className="grid grid-cols-[120px_1fr] gap-4 items-start"
                   >
-                    <div className="overflow-hidden rounded-sm">
+                    <div className="overflow-hidden rounded-md">
                       <img
                         src={blog.image}
                         alt={blog.title}

@@ -105,10 +105,10 @@ export default function GettingToVels() {
             viewport={{ once: true }}
           >
             <Image
-              src="/assets/jee.png"
+              src="/assets/je.png"
               alt="JEE Illustration"
               fill
-              className="object-cover rounded-sm"
+              className="object-cover rounded-xl"
               sizes="(max-width:768px) 100vw, 540px"
               priority
             />

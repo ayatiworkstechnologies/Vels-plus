@@ -92,7 +92,7 @@ export default function EventsExact() {
                     {/* image */}
                     <div
                       className={[
-                        "relative aspect-[4/3] overflow-hidden shadow-md transition-all duration-500 ease-out",
+                        "relative aspect-[4/3] overflow-hidden shadow-md transition-all duration-500 ease-out rounded-xl",
                         isActive ? "opacity-100 grayscale-0" : "opacity-40 grayscale contrast-75"
                       ].join(" ")}
                     >
@@ -129,8 +129,8 @@ export default function EventsExact() {
                      <button
                       className={
                         isActive
-                          ? "text-sm px-4 py-2 bg-primary text-white"
-                          : "text-sm px-4 py-2 bg-gray-200 text-gray-600"
+                          ? "text-sm px-4 py-2 bg-primary text-white rounded-md"
+                          : "text-sm px-4 py-2 bg-gray-200 text-gray-600 rounded-md"
                       }
                     >
                       {ev.date}

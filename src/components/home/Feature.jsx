@@ -5,9 +5,15 @@ import { motion } from "framer-motion";
 const Feature = () => {
   return (
     <section
-      id="target-section"
-      className="relative flex items-center justify-center bg-white text-black overflow-hidden py-16 px-4"
-    >
+  id="target-section"
+  className="relative flex items-center justify-center text-black overflow-hidden py-16 px-4"
+  style={{
+    backgroundImage: "url('/assets/paper-1.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+      
       <div className="flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center">
 
         {/* VIDEO BLOCK */}
@@ -18,7 +24,7 @@ const Feature = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="w-[240px] md:w-[280px] aspect-[9/16] rounded-lg overflow-hidden shadow-lg">
+          <div className="w-[240px] md:w-[380px] aspect-[12/16] rounded-lg overflow-hidden shadow-lg">
             <video
               className="w-full h-full object-cover"
               autoPlay

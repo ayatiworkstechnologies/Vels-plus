@@ -84,10 +84,10 @@ const NeetSection = () => {
           className="relative w-full max-w-md lg:max-w-[540px] h-[350px] sm:h-[450px] lg:h-[548px] shadow-lg order-2 lg:order-1"
         >
           <Image
-            src="/assets/neet.png"
+            src="/assets/nt.png"
             alt="NEET Aspirations"
             fill
-            className="object-cover rounded-sm"
+            className="object-cover rounded-xl"
             priority
           />
         </motion.div>

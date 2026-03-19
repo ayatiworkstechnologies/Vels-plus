@@ -86,10 +86,10 @@ export default function AcademicWorkshops() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[589px] h-[300px] sm:h-[420px] lg:h-[559px] overflow-hidden">
+          <div className="relative flex justify-center lg:justify-end border-2 border-white">
+            <div className="relative w-full max-w-[589px] h-[300px] sm:h-[420px] lg:h-[559px] overflow-hidden rounded-xl">
               <Image
-                src="/assets/workshop.png"
+                src="/assets/academic.png"
                 alt="Academic Excellence Workshop"
                 fill
                 className="object-cover"
@@ -103,50 +103,61 @@ export default function AcademicWorkshops() {
       </section>
 
       {/* NEET JEE SECTION */}
-      <section className="bg-white py-12 md:py-16 px-4 sm:px-6 font-primary">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="relative overflow-hidden bg-[#f4f4f4] px-4 py-16 sm:px-6 md:py-20">
+      {/* pastel gradient extracts */}
+      <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-[#efe8b8]/70 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-28 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-[#cfe8cf]/65 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-20 -right-16 h-72 w-72 rounded-full bg-[#cfcff1]/75 blur-3xl" />
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-primary text-gray-900 mb-8 md:mb-10 tracking-[0.05em] uppercase"
-          >
-            NEET & JEE (Mains & Advanced)
-          </motion.h2>
+      {/* soft top wash */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-white/20 blur-2xl" />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 1 }}
-            className="space-y-4 text-[#4a4a4a] font-secondary font-light text-sm sm:text-base md:text-lg tracking-[0.03em]"
-          >
-            <p>
-              VELS has long been distinguished for the best preparatory courses
-              and results for Medical (NEET) & Engineering (IIT-JEE) entrance
-              examinations.
-            </p>
+      <div className="relative z-10 mx-auto max-w-5xl text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="font-serif text-[32px] leading-tight text-[#161616] sm:text-[40px] md:text-[50px]"
+        >
+          NEET &amp; JEE (Mains &amp; Advanced)
+        </motion.h2>
 
-            <p>
-              We offer methodical coaching and a healthy competitive atmosphere
-              to the aspirants through our excellent curriculum.
-            </p>
-
-            <p>
-              The study material prepared by our well-versed faculties after
-              extensive research is comprehensive and simple to understand.
-            </p>
-
-            <p>
-              The specially tailored curriculum takes care of board examinations
-              simultaneously.
-            </p>
-          </motion.div>
-
-        </div>
-      </section>
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.9 }}
+          className="mx-auto mt-8 max-w-4xl text-center text-[15px] leading-[2.1] text-[#787878] sm:text-[17px] md:text-[18px]"
+        >
+          <p>
+            <span className="font-semibold text-[#111]">VELS</span> has long been
+            distinguished for the best preparatory courses and results for{" "}
+            <span className="font-semibold text-[#111]">
+              Medical (NEET) &amp; Engineering (IIT-JEE)
+            </span>{" "}
+            entrance examinations. We offer methodical coaching and a{" "}
+            <span className="font-semibold text-[#111]">
+              healthy competitive atmosphere
+            </span>{" "}
+            to the aspirants through our{" "}
+            <span className="font-semibold text-[#111]">
+              excellent curriculum.
+            </span>{" "}
+            The study material which has been prepared by our well versed
+            faculties after{" "}
+            <span className="font-semibold text-[#111]">
+              extensive research
+            </span>{" "}
+            is comprehensive and simple to understand. The specially{" "}
+            <span className="font-semibold text-[#111]">
+              tailored curriculum
+            </span>{" "}
+            takes care of board examinations simultaneously.
+          </p>
+        </motion.div>
+      </div>
+    </section>
     </>
   );
 }

@@ -17,7 +17,9 @@ import TestimonialsCarousel from "../components/home/TestimonialsCarousel";
 import NeetSection from "../components/home/Neet";
 import Blog from "../components/home/Blogs";
 import Welcome from "../components/home/Welcome";
-
+import NeetCards from "../components/home/NeetCards";
+import Testimonial from "../components/home/Testimonial";
+import Course from "../components/home/Course";
 export default function Home() {
   return (
     <>
@@ -25,24 +27,22 @@ export default function Home() {
                 
                 {/* Components rendered globally (will appear on ALL pages) */}
                 <Hero />
-                 <Welcome />
+                <Welcome />
+                <NeetCards />
                 <Feature />
-               
-                {/* <StatsGrid /> */}
                 <FounderSection />
+                <Course />
                 <WhyChooseSection />
                 <ReelView />
                 <KeyPoints />
-                  <Facilities />
-               <NeetSection />
-            {/* <DesignedOccasion /> */}
+                <Facilities />
+                <NeetSection />
                 <Gettingtovels />
-               
                 <Events />
-                 <Blog />
-                <TestimonialsCarousel />
-                {/* <HoverExpandCarousel />  */}
-                {/* <Faqs /> */}
+                <Blog />
+                <Testimonial />
+                
+               
     </>
   );
 }
