@@ -57,11 +57,11 @@ export default function GettingToVels() {
               <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="rounded-[12px] bg-[#e7edf2] p-5">
                   <div className="border-l-[3px] border-[#1f5f87] pl-4">
-                    <h3 className="text-[18px] font-semibold text-[#183247]">
+                    <h3 className="text-xl font-semibold text-[#183247]">
                       Two Level Exam
                     </h3>
 
-                    <div className="mt-3 space-y-1 text-[14px] leading-7 text-[#4b5964]">
+                    <div className="mt-3 space-y-1 text-xl leading-7 text-[#4b5964]">
                       <p>(1) JEE Main conducted by NTA</p>
                       <p>(2) JEE Advanced conducted by IITs</p>
                     </div>
@@ -70,11 +70,11 @@ export default function GettingToVels() {
 
                 <div className="rounded-[12px] bg-[#e7edf2] p-5">
                   <div className="border-l-[3px] border-[#1f5f87] pl-4">
-                    <h3 className="text-[18px] font-semibold text-[#183247]">
+                    <h3 className="text-xl font-semibold text-[#183247]">
                       Syllabus
                     </h3>
 
-                    <p className="mt-3 text-[14px] leading-7 text-[#4b5964]">
+                    <p className="mt-3 text-xl leading-7 text-[#4b5964]">
                       11th and 12th according to NCERT.
                     </p>
                   </div>
@@ -89,11 +89,11 @@ export default function GettingToVels() {
                   </div>
 
                   <div>
-                    <h3 className="text-[18px] font-semibold text-[#183247]">
+                    <h3 className="text-xl font-semibold text-[#183247]">
                       Core Subjects
                     </h3>
 
-                    <ul className="mt-3 space-y-2 text-[14px] text-[#4b5964]">
+                    <ul className="mt-3 space-y-2 text-xl text-[#4b5964]">
                       <li className="flex items-center gap-2">
                         <span className="h-1.5 w-1.5 rounded-full bg-[#4b5964]" />
                         Physics
@@ -116,11 +116,11 @@ export default function GettingToVels() {
                   </div>
 
                   <div>
-                    <h3 className="text-[18px] font-semibold text-[#183247]">
+                    <h3 className="text-xl font-semibold text-[#183247]">
                       JEE Main Pattern
                     </h3>
 
-                    <p className="mt-3 text-[14px] leading-7 text-[#4b5964]">
+                    <p className="mt-3 text-lg leading-7 text-[#4b5964]">
                       25 MCQ (4 options, 1 correct) &amp; 10 Numerical answer
                       based question per subject. Out of 10 numerical only 5
                       are to be attempted
@@ -132,7 +132,7 @@ export default function GettingToVels() {
               {/* bottom cards */}
               <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="rounded-[12px] border border-[#d9e0e5] bg-[#f5f7f8] p-5">
-                  <h3 className="flex items-center gap-2 text-[18px] font-semibold text-[#183247]">
+                  <h3 className="flex items-center gap-2 text-xl font-semibold text-[#183247]">
                     <CircleDot className="h-4 w-4 text-[#2a5f7c]" strokeWidth={2.5} />
                     Marking Scheme
                   </h3>
@@ -151,12 +151,12 @@ export default function GettingToVels() {
                 </div>
 
                 <div className="rounded-[12px] border border-[#d9e0e5] bg-[#f5f7f8] p-5">
-                  <h3 className="flex items-center gap-2 text-[18px] font-semibold text-[#183247]">
+                  <h3 className="flex items-center gap-2 text-lg font-semibold text-[#183247]">
                     <CheckCircle2 className="h-4 w-4 text-[#2a5f7c]" strokeWidth={2.5} />
                     Eligibility &amp; Scope
                   </h3>
 
-                  <p className="mt-4 text-[14px] leading-7 text-[#4b5964]">
+                  <p className="mt-4 text-lg leading-7 text-[#4b5964]">
                     JEE Main scores provide eligibility for admission to NITs,
                     IIITs, GFTIs, and top-tier Private Engineering Colleges.
                   </p>
