@@ -5,46 +5,39 @@ export default function UniqueBandMarquee() {
 
   return (
     <section className="w-full overflow-hidden bg-white py-10">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="relative overflow-hidden  border border-[#2C3691]/15 bg-[#2C3691] shadow-[0_18px_50px_rgba(44,54,145,0.22)]">
-          {/* left fade */}
-          <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-24 bg-gradient-to-r from-[#2C3691] via-[#2C3691] to-transparent" />
-          {/* right fade */}
-          <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-24 bg-gradient-to-l from-[#2C3691] via-[#2C3691] to-transparent" />
+      <div className="relative overflow-hidden">
+        {/* left fade */}
+        <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-24 bg-gradient-to-r from-white via-white to-transparent" />
 
-          {/* subtle center line */}
-          <div className="pointer-events-none absolute left-0 top-1/2 z-10 h-px w-full -translate-y-1/2 bg-white/10" />
+        {/* right fade */}
+        <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-24 bg-gradient-to-l from-white via-white to-transparent" />
 
-          <div className="marquee-track flex min-w-max items-center py-5 md:py-6">
-            {[...items, ...items].map((item, index) => (
+        <div className="marquee-track flex min-w-max items-center py-4 md:py-5">
+          {[...items, ...items].map((item, index) => (
+            <div
+              key={index}
+              className="mx-8 md:mx-10 flex items-center gap-5 whitespace-nowrap"
+            >
+              <span className="h-2.5 w-2.5 rounded-full bg-[#2C3691] pulse-dot" />
+
               <div
-                key={index}
-                className="mx-8 md:mx-10 flex items-center gap-5 whitespace-nowrap"
+                className="scan-wrap relative"
+                style={{ animationDelay: `${index * 0.4}s` }}
               >
-                <span className="h-2.5 w-2.5 rounded-full bg-white/85 pulse-dot" />
+                <span className="base-text text-lg md:text-2xl font-semibold uppercase tracking-[0.35em] text-[#2C3691]/20">
+                  {item}
+                </span>
 
-                <div
-                  className="scan-wrap relative"
-                  style={{ animationDelay: `${index * 0.4}s` }}
-                >
-                  {/* base text */}
-                  <span className="base-text text-lg md:text-2xl font-semibold uppercase tracking-[0.35em] text-white/30">
-                    {item}
-                  </span>
+                <span className="scan-text scan-a text-lg md:text-2xl font-semibold uppercase tracking-[0.35em] text-[#2C3691]">
+                  {item}
+                </span>
 
-                  {/* animated overlay 1 */}
-                  <span className="scan-text scan-a text-lg md:text-2xl font-semibold uppercase tracking-[0.35em] text-white">
-                    {item}
-                  </span>
-
-                  {/* animated overlay 2 */}
-                  <span className="scan-text scan-b text-lg md:text-2xl font-semibold uppercase tracking-[0.35em] text-white/80">
-                    {item}
-                  </span>
-                </div>
+                <span className="scan-text scan-b text-lg md:text-2xl font-semibold uppercase tracking-[0.35em] text-[#2C3691]/75">
+                  {item}
+                </span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -67,26 +60,26 @@ export default function UniqueBandMarquee() {
         }
 
         .base-text {
-          text-shadow: 0 0 10px rgba(255, 255, 255, 0.06);
+          text-shadow: 0 0 8px rgba(44, 54, 145, 0.06);
         }
 
         .scan-a {
           animation: scanRevealA 3.8s ease-in-out infinite;
           text-shadow:
-            0 0 8px rgba(255,255,255,0.16),
-            0 0 18px rgba(255,255,255,0.08);
+            0 0 8px rgba(44, 54, 145, 0.16),
+            0 0 18px rgba(44, 54, 145, 0.08);
         }
 
         .scan-b {
           animation: scanRevealB 3.8s ease-in-out infinite;
           text-shadow:
-            0 0 8px rgba(255,255,255,0.1),
-            0 0 16px rgba(255,255,255,0.06);
+            0 0 8px rgba(44, 54, 145, 0.1),
+            0 0 16px rgba(44, 54, 145, 0.06);
         }
 
         .pulse-dot {
           animation: dotFloat 2.8s ease-in-out infinite;
-          box-shadow: 0 0 12px rgba(255,255,255,0.28);
+          box-shadow: 0 0 10px rgba(44, 54, 145, 0.22);
         }
 
         @keyframes marqueeMove {
@@ -102,7 +95,6 @@ export default function UniqueBandMarquee() {
           0%,
           100% {
             clip-path: inset(0 100% 0 0);
-            transform: translateY(0px);
             opacity: 0;
           }
           15% {
@@ -136,7 +128,6 @@ export default function UniqueBandMarquee() {
           100% {
             clip-path: inset(100% 0 0 0);
             opacity: 0;
-            transform: translateY(0px);
           }
           20% {
             clip-path: inset(65% 0 0 0);

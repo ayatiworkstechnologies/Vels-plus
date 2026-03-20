@@ -4,33 +4,33 @@ const courses = [
   {
     id: 1,
     title: "NEET / MEDICAL",
-    desc: "Focused NEET preparation for future medical aspirants.",
+    desc: "Focused NEET preparation for future medical success.",
     image:
-      "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80",
+      "/assets/medical.png",
     link: "#",
   },
   {
     id: 2,
-    title: "NEET / MEDICAL",
-    desc: "Focused NEET preparation for future medical aspirants.",
+    title: "IIT /JEE",
+    desc: "Strong concepts for engineering entrance success.",
     image:
-      "https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&fit=crop&w=900&q=80",
+      "/assets/iit.png",
     link: "#",
   },
   {
     id: 3,
-    title: "NEET / MEDICAL",
-    desc: "Focused NEET preparation for future medical aspirants.",
+    title: "FOUNDATIONS",
+    desc: "Building basics in mathematics and science.",
     image:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80",
+      "/assets/found.png",
     link: "#",
   },
   {
     id: 4,
-    title: "NEET / MEDICAL",
-    desc: "Focused NEET preparation for future medical aspirants.",
+    title: "TUITIONS(SB & CBSE)",
+    desc: "Focused support for school board excellence.",
     image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80",
+      "/assets/cbse.png",
     link: "#",
   },
 ];

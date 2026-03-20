@@ -39,7 +39,7 @@ export default function Hero() {
 
   return (
     <section className="relative w-full h-[550px] md:h-[650px] lg:h-[720px] overflow-hidden text-white">
-
+      
       {/* ===== Desktop Slider ===== */}
       <div className="absolute inset-0 z-0 hidden md:block">
         <Slider {...settings}>
@@ -47,7 +47,7 @@ export default function Hero() {
             <div key={i} className="w-full h-[650px] lg:h-[720px]">
               <img
                 src={slide.img}
-                alt="banner"
+                alt={`Desktop banner ${i + 1}`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -62,7 +62,7 @@ export default function Hero() {
             <div key={i} className="w-full h-[550px]">
               <img
                 src={slide.img}
-                alt="banner"
+                alt={`Mobile banner ${i + 1}`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -70,41 +70,49 @@ export default function Hero() {
         </Slider>
       </div>
 
-      
+      {/* ===== TEXT OVERLAY ===== */}
+      <div className="absolute inset-0 z-20 flex items-start md:items-center pt-[10vh] sm:pt-[20vh] md:pt-0">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10">
 
-     {/* TEXT OVERLAY ONLY */}
-<div className="absolute inset-0 z-20 flex items-center">
-  <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10">
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-[280px] sm:max-w-md md:max-w-xl lg:max-w-2xl 
+                       mx-auto md:mx-0 text-center md:text-left"
+          >
+            {/* Subtitle */}
+            <p className="text-black text-xs sm:text-sm md:text-lg font-primary mb-2 sm:mb-3 tracking-wide">
+              Vels Plus
+            </p>
 
-    <motion.div
-      initial={{ opacity: 0, x: -60 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="max-w-xl"
-    >
-      <p className="text-black text-sm md:text-base mb-3">
-        Vels Plus
-      </p>
+            {/* Heading */}
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-primary font-semibold leading-[1.15] md:leading-tight">
+              <span className="text-[#F59E0B]">Building</span>{" "}
+              <span className="text-black">strong academic</span> <br />
 
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-  <span className="text-[#F59E0B]">Building</span>{" "}
-  <span className="text-black">strong academic</span> <br />
-  <span className="text-[#1E3A8A] font-bold">foundations</span>{" "}
-  <span className="text-black">for</span> <br />
-  <span className="text-black">future</span>{" "}
-  <span className="text-[#22C55E]">success...</span>
-</h1>
+              <span className="text-[#1E3A8A] font-bold">foundations</span>{" "}
+              <span className="text-black">for</span> <br />
 
-      <p className="mt-6 text-black text-lg">01</p>
-    </motion.div>
+              <span className="text-black">future</span>{" "}
+              <span className="text-[#22C55E]">success...</span>
+            </h1>
 
-  </div>
-</div>
+            {/* Slide Number */}
+            <p className="mt-4 sm:mt-5 md:mt-6 text-black text-sm sm:text-base md:text-lg opacity-80">
+              01
+            </p>
+          </motion.div>
+
+        </div>
+      </div>
 
       {/* ===== Scroll Button ===== */}
       <motion.button
         onClick={handleClick}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 p-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-black transition duration-300 animate-bounce"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 p-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-black transition duration-300"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 1.6 }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

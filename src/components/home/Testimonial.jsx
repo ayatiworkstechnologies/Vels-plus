@@ -91,8 +91,8 @@ export default function TestimonialExtract() {
                     key={item.id}
                     className={`min-w-[320px] sm:min-w-[340px] md:min-w-[360px] rounded-2xl p-7 transition-all duration-500 ${
                       isActive
-                        ? "bg-[#0E233D] text-white shadow-xl"
-                        : "bg-[#efefee] text-neutral-900 shadow-sm"
+                        ? "bg-primary text-white shadow-xl"
+                        : "bg-gray text-neutral-900 shadow-sm"
                     }`}
                   >
                     <p className="text-[17px] font-medium leading-[1.25] sm:text-[18px] md:text-[20px]">
