@@ -32,7 +32,7 @@ export default function AcademicWorkshops() {
         
         {/* Heading */}
         <div className="mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-primary text-gray-900 tracking-tight">
             Academic Excellence Workshops
           </h2>
         </div>
@@ -118,7 +118,7 @@ export default function AcademicWorkshops() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-serif text-[32px] leading-tight text-[#161616] sm:text-[40px] md:text-[50px]"
+          className="font-primary text-[32px] leading-tight text-[#161616] sm:text-[40px] md:text-[50px]"
         >
           NEET &amp; JEE (Mains &amp; Advanced)
         </motion.h2>

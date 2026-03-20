@@ -49,7 +49,7 @@ export default function GettingToVels() {
               transition={{ duration: 0.7, delay: 0.06 }}
               className="order-2"
             >
-              <h2 className="font-serif text-[28px] leading-tight text-[#171717] sm:text-[38px] lg:text-[34px] xl:text-[42px]">
+              <h2 className="font-primary text-[28px] leading-tight text-[#171717] sm:text-[38px] lg:text-[34px] xl:text-[42px]">
                 JEE - (Joint Entrance Exam)
               </h2>
 

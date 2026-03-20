@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const courses = [
   {
     id: 1,
-    title: "NEET Chemistry Essentials",
+    title: "NEET Physics Overview",
     accent: "#D4DDB2",
     icon: "/assets/1.png",
   },
@@ -18,43 +18,43 @@ const courses = [
   },
   {
     id: 3,
-    title: "NEET Chemistry Essentials",
+    title: "NEET Biology Guide",
     accent: "#B6B3F1",
     icon: "/assets/3.png",
   },
   {
     id: 4,
-    title: "NEET Chemistry Essentials",
+    title: "Practice Questions and Mock Tests",
     accent: "#EDB8CF",
     icon: "/assets/4.png",
   },
   {
     id: 5,
-    title: "NEET Chemistry Essentials",
+    title: "Study Resources and Materials",
     accent: "#F0B8C1",
     icon: "/assets/5.png",
   },
   {
     id: 6,
-    title: "NEET Chemistry Essentials",
+    title: "Exam Strategy and Tips",
     accent: "#EDD0B5",
     icon: "/assets/6.png",
   },
   {
     id: 7,
-    title: "NEET Chemistry Essentials",
+    title: "Previous Years' Papers",
     accent: "#CBC9E8",
     icon: "/assets/7.png",
   },
   {
     id: 8,
-    title: "NEET Chemistry Essentials",
+    title: "Online Courses and Tutorials",
     accent: "#E2B8E7",
     icon: "/assets/8-1.png",
   },
   {
     id: 9,
-    title: "NEET Chemistry Essentials",
+    title: "Additional Support and Guidance",
     accent: "#E3E1A6",
     icon: "/assets/9.png",
   },
@@ -117,7 +117,7 @@ export default function CourseCategoriesLayout() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-serif text-3xl text-[#171717] md:text-5xl"
+            className="font-primary text-3xl text-[#171717] md:text-5xl"
           >
             Course Categories
           </motion.h2>

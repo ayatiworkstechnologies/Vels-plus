@@ -87,7 +87,7 @@ export default function BlogSection() {
   return (
     <section className="w-full bg-[#f5f5f5] py-14 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-10">
+        <h2 className="text-3xl md:text-4xl font-primary text-gray-900 mb-10">
           Blogs
         </h2>
 
@@ -104,7 +104,7 @@ export default function BlogSection() {
               </div>
 
               <div className="pt-5">
-                <h3 className="text-xl md:text-2xl font-serif text-gray-900 leading-snug">
+                <h3 className="text-xl md:text-2xl font-primary text-gray-900 leading-snug">
                   {latestBlog.title}
                 </h3>
 
@@ -141,7 +141,7 @@ export default function BlogSection() {
                     </div>
 
                     <div>
-                      <h4 className="text-base md:text-lg font-serif text-gray-900 leading-snug">
+                      <h4 className="text-base md:text-lg font-primary text-gray-900 leading-snug">
                         {blog.title}
                       </h4>
 

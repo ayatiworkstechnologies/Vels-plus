@@ -199,7 +199,7 @@ export default function ContactTabs() {
   /* --- MAIN UI RETURN --- */
   return (
     <motion.div
-      className="min-h-screen bg-white text-[#1a1a1a] font-serif"
+      className="min-h-screen bg-white text-[#1a1a1a] font-primary"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}

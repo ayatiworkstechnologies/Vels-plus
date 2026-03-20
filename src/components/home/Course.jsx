@@ -51,7 +51,7 @@ export default function Course() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center">
-          <h2 className="font-serif text-3xl text-[#222] md:text-4xl">
+          <h2 className="font-primary text-3xl text-[#222] md:text-4xl">
             List Of Our Courses
           </h2>
         </div>
@@ -71,7 +71,7 @@ export default function Course() {
               </div>
 
               <div className="px-1 pb-2 pt-4">
-                <h3 className="font-serif text-[17px] font-semibold uppercase tracking-[0.02em] text-[#222]">
+                <h3 className="font-primary text-[17px] font-semibold uppercase tracking-[0.02em] text-[#222]">
                   {course.title}
                 </h3>
 
