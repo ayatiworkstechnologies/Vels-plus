@@ -117,7 +117,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="border-t border-white/10 bg-[#2f3192] px-4 py-4 lg:hidden">
-          <nav className="flex flex-col gap-1 text-sm font-medium">
+          <nav className="flex flex-col gap-1 text-lg font-primary">
             <Link
               href="/"
               className="rounded-lg px-3 py-2 transition hover:bg-white/10"
@@ -178,7 +178,7 @@ export default function Header() {
             )}
 
             <Link
-              href="/facilities"
+              href="#"
               className="rounded-lg px-3 py-2 transition hover:bg-white/10"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -186,7 +186,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/gallery"
+              href="#"
               className="rounded-lg px-3 py-2 transition hover:bg-white/10"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -194,7 +194,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/contact"
+              href="#"
               className="rounded-lg px-3 py-2 transition hover:bg-white/10"
               onClick={() => setMobileMenuOpen(false)}
             >

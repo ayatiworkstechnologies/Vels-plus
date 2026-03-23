@@ -74,8 +74,8 @@ export default function VelsPlusFooter() {
           <div>
             <h3 className="text-xl font-semibold">Quick Links</h3>
             <ul className="mt-5 space-y-4 text-sm text-white/90">
-              <li><Link href="#">Home</Link></li>
-              <li><Link href="#">About Us</Link></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About Us</Link></li>
               <li><Link href="#">Courses</Link></li>
               <li><Link href="#">Facilities</Link></li>
               <li><Link href="#">Results</Link></li>
