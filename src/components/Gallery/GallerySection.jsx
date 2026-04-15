@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
 const images = [
-  { src: '/assets/mision.jpg', alt: 'Large rock formation', className: 'md:col-span-3 md:row-span-2' },
-  { src: '/assets/dune-walking.jpg', alt: 'Person walking on dunes', className: 'md:col-span-1 md:row-span-2' },
-  { src: '/assets/camel-caravan.jpg', alt: 'Camel caravan', className: 'md:col-span-1 md:row-span-2' },
-  { src: '/assets/sunset-tea.jpg', alt: 'Tea at sunset', className: 'md:col-span-1 md:row-span-2' },
-  { src: '/assets/canyon.jpg', alt: 'Slot canyon', className: 'md:col-span-2 md:row-span-2' },
-  { src: '/assets/sky-1.jpg', alt: 'Blue sky', className: 'md:col-span-1 md:row-span-1' },
-  { src: '/assets/sky-2.jpg', alt: 'Golden sky', className: 'md:col-span-3 md:row-span-1' },
+  { src: '/assets/image-1.png', alt: 'Large rock formation', className: 'md:col-span-3 md:row-span-2' },
+  { src: '/assets/image-3.png', alt: 'Person walking on dunes', className: 'md:col-span-1 md:row-span-2' },
+  { src: '/assets/neet.png', alt: 'Camel caravan', className: 'md:col-span-1 md:row-span-2' },
+  { src: '/assets/strong-2.png', alt: 'Tea at sunset', className: 'md:col-span-1 md:row-span-2' },
+  { src: '/assets/strong-1.png', alt: 'Slot canyon', className: 'md:col-span-2 md:row-span-2' },
+  { src: '/assets/strong-4.png', alt: 'Blue sky', className: 'md:col-span-1 md:row-span-1' },
+  { src: '/assets/mission.jpg', alt: 'Golden sky', className: 'md:col-span-3 md:row-span-1' },
 ];
 
 export default function PhotoGallery() {

@@ -29,8 +29,8 @@ export default function Header() {
           </button>
 
           <div className="invisible absolute left-1/2 top-full z-50 mt-3 w-48 -translate-x-1/2 rounded-xl bg-white py-2 text-gray-800 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100">
-            <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-              JEE Coaching
+            <Link href="/neet" className="block px-4 py-2 hover:bg-gray-100">
+              Neet / Medical
             </Link>
             <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
               NEET Coaching
@@ -154,11 +154,11 @@ export default function Header() {
             {coursesOpen && (
               <div className="ml-3 flex flex-col gap-1 border-l border-white/20 pl-3 text-white/90">
                 <Link
-                  href="#"
+                  href="/neet"
                   className="rounded-lg px-3 py-2 transition hover:bg-white/10"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  JEE Coaching
+                  Neet/Medical
                 </Link>
                 <Link
                   href="#"
