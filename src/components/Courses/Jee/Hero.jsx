@@ -39,7 +39,7 @@ const Hero = () => {
 
         {/* Title */}
         <h1 className="text-4xl md:text-6xl font-primary mb-3">
-          Facilities
+          IIT - JEE
         </h1>
 
         {/* Breadcrumbs */}
@@ -55,7 +55,7 @@ const Hero = () => {
             <path d="M9 18l6-6-6-6" />
           </svg>
 
-          <span className="opacity-90">Facilities</span>
+          <span className="opacity-90">IIT - JEE</span>
         </div>
       </div>
 

@@ -1,9 +1,9 @@
-import Hero from "../../components/Courses/Neet/Hero";
-import NeetSection from "../../components/Courses/Neet/NeetSection";
 
+import Hero from "../../components/Courses/Tuitions/Hero";
+import TuitionSection from "../../components/Courses/Tuitions/TuitionSection";
 
-const siteTitle = "Neet / Medical - Vels Plus Coaching in Chennai | NEET Preparation";
-const siteDescription = "Prepare for NEET / Medical with Vels Plus in Chennai. Expert coaching, comprehensive study materials, and a proven track record of success in NEET exams. Join us to achieve your medical dreams.";
+const siteTitle = "IIT - JEE - Vels Plus Coaching in Chennai | JEE Preparation";
+const siteDescription = "Prepare for IIT - JEE with Vels Plus in Chennai. Expert coaching, comprehensive study materials, and a proven track record of success in JEE exams. Join us to achieve your engineering dreams.";
 const siteUrl = 'https://yourwebsite.com';
 const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
 
@@ -30,8 +30,7 @@ export default function neet() {
   return (
     <>
         <Hero />
-        <NeetSection />
-       
+        <TuitionSection />
        
     </>
     

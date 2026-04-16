@@ -63,10 +63,10 @@ export default function VelsPlusFooter() {
           <div>
             <h3 className="text-xl font-semibold">Courses</h3>
             <ul className="mt-5 space-y-4 text-sm text-white/90">
-              <li><Link href="#">NEET / MEDICAL</Link></li>
-              <li><Link href="#">IIT-JEE</Link></li>
-              <li><Link href="#">FOUNDATIONS</Link></li>
-              <li><Link href="#">TUITIONS (SB & CBSE)</Link></li>
+              <li><Link href="/neet">NEET / MEDICAL</Link></li>
+              <li><Link href="/jee">IIT-JEE</Link></li>
+              <li><Link href="/foundations">FOUNDATIONS</Link></li>
+              <li><Link href="/tuitions">TUITIONS (SB & CBSE)</Link></li>
             </ul>
           </div>
 
@@ -76,11 +76,10 @@ export default function VelsPlusFooter() {
             <ul className="mt-5 space-y-4 text-sm text-white/90">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="#">Courses</Link></li>
-              <li><Link href="#">Facilities</Link></li>
-              <li><Link href="#">Results</Link></li>
-              <li><Link href="#">Gallery</Link></li>
-              <li><Link href="#">Contact</Link></li>
+              <li><Link href="/neet">Courses</Link></li>
+              <li><Link href="/facilities">Facilities</Link></li>
+              <li><Link href="/gallery">Gallery</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 
@@ -100,24 +99,40 @@ export default function VelsPlusFooter() {
             <h3 className="text-xl font-semibold">Get in touch</h3>
 
             <div className="mt-5 space-y-6 text-sm text-white/90">
-              <div className="flex gap-3">
-                <Phone size={18} />
-                <span>+91 99405 82758</span>
-              </div>
 
-              <div className="flex gap-3">
-                <Mail size={18} />
-                <span>velsplusacademy@gmail.com</span>
-              </div>
+  {/* Phone */}
+  <a
+    href="tel:+919940582758"
+    className="flex items-center gap-3 hover:text-cyan-300 transition"
+  >
+    <Phone size={18} />
+    <span>+91 99405 82758</span>
+  </a>
 
-              <div className="flex gap-3">
-                <MapPin size={18} />
-                <span>
-                  No. 42, Anna Nagar,<br />
-                  Chennai - 600040
-                </span>
-              </div>
-            </div>
+  {/* Email */}
+  <a
+    href="mailto:velsplusacademy@gmail.com"
+    className="flex items-center gap-3 hover:text-cyan-300 transition"
+  >
+    <Mail size={18} />
+    <span>velsplusacademy@gmail.com</span>
+  </a>
+
+  {/* Location (Google Maps) */}
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Anna+Nagar+Chennai+600040"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-start gap-3 hover:text-cyan-300 transition"
+  >
+    <MapPin size={18} />
+    <span>
+      No. 42, Anna Nagar,<br />
+      Chennai - 600040
+    </span>
+  </a>
+
+</div>
           </div>
         </div>
 
