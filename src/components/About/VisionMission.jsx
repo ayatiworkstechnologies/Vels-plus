@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import missionImg from "@/public/assets/philosophy.png";
-import visionImg from "@/public/assets/commitment.png";
+import missionImg from "@/public/assets/our-phi.png";
+import visionImg from "@/public/assets/our-commit.png";
 
 const tabContent = {
   vision: {

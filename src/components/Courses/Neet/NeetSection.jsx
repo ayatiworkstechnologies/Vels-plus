@@ -71,7 +71,7 @@ export default function NeetMedicalBanner() {
           >
             <div className="relative aspect-[4/5] w-full">
               <Image
-                src="/assets/neet.png"
+                src="/assets/neet-2020.png"
                 alt="NEET Eligibility"
                 fill
                 priority

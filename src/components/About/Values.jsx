@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import imgSrc from "@/public/assets/value.png";
+import imgSrc from "@/public/assets/Values.png";
 
 export default function ValuesSection() {
   const values = [

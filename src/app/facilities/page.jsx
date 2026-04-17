@@ -4,8 +4,8 @@ import FacilitiesGrid from "../../components/Facilities/FacilitiesGrid";
 import FacilityHighlights from "../../components/Facilities/FacilityHighlights";
 
 
-const siteTitle = "About Us  | Vels Film City Chennai | Media and Entertainment Hub";
-const siteDescription = "Discover Vels Film City in Chennai, a premier media and entertainment hub offering state-of-the-art facilities for film production, events, and more.";
+const siteTitle = "Vels Facilities - Vels Plus Coaching in Chennai";
+const siteDescription = "Discover the state-of-the-art facilities at Vels Plus Coaching in Chennai. Our modern classrooms, well-equipped labs, and comfortable study areas provide the perfect environment for JEE, NEET, and CBSE preparation. Experience the best learning atmosphere with us.";
 const siteUrl = 'https://yourwebsite.com';
 const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
 

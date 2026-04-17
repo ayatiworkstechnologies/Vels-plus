@@ -65,7 +65,6 @@ export default function VelsPlusFooter() {
             <ul className="mt-5 space-y-4 text-sm text-white/90">
               <li><Link href="/neet">NEET / MEDICAL</Link></li>
               <li><Link href="/jee">IIT-JEE</Link></li>
-              <li><Link href="/foundations">FOUNDATIONS</Link></li>
               <li><Link href="/tuitions">TUITIONS (SB & CBSE)</Link></li>
             </ul>
           </div>

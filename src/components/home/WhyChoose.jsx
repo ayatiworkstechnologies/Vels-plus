@@ -114,7 +114,7 @@ export default function StackingCardSlider() {
             >
               What we offer
             </p>
-            <h2 className="text-3xl font-bold font-primary leading-tight text-[#1a1733] sm:text-4xl md:text-5xl">
+            <h2 className="font-primary text-3xl text-[#222] md:text-4xl">
               Why VELS Plus{" "}
               <span style={{ color: card.accent, transition: "color 0.4s ease" }}>
                 Stands Out

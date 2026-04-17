@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import featuredbanner from "@/public/assets/legacy.png";
+import featuredbanner from "@/public/assets/legacy-1.png";
 import { motion } from "framer-motion"; // ✅ Add this
 
 const OurLegacy = () => {

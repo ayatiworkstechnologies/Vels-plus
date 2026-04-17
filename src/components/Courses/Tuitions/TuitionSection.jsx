@@ -23,14 +23,50 @@ export default function TuitionSection() {
   ];
   return ( <>
   
+       <section className="relative w-full overflow-hidden">
       
+      {/* Background Image */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] bg-center bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: "url('/assets/neet-bg.png')",
+        }}
+      >
+        {/* 🔥 Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/40"></div>
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto max-w-[1200px] px-6 py-14 md:py-20">
+          
+          {/* Glass Card */}
+          <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-[24px] p-6 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.25)]">
+            
+            {/* Title */}
+            <h2 className="text-center font-serif text-[32px] md:text-[48px] text-white">
+              CBSE NCERT Syllabus 2016 – 2019
+
+            </h2>
+
+            {/* Divider */}
+            <div className="mx-auto mt-4 h-[3px] w-20 bg-yellow-400 rounded-full"></div>
+
+            {/* Content */}
+            <p className="mt-8 text-center text-[14px] md:text-[16px] leading-[1.9] text-white/90">
+              Latest CBSE Syllabus for Vocational courses effective for the Academic Session 2016 – 2019 for classes 9th, 10th, 11th and 12th. The vocational subject can be offered as an additional (optional) subject in combination with five core Academic subjects. The CGPA of class IX and X will be calculated based on the grade obtained in five academic subjects and grade obtained in vocational subject will be reflected under additional (optional)subject. OR Vocational subject can be offered as additional (compulsory) subject with five core Academic subjects (Rationalized version). The CGPA of Class IX / X will be calculatedbased on the grade obtained in all six subjects, if vocational subject is taken as additional (compulsory) sixth subject Central Board of Secondary Education (CBSE) board will conduct class 9th, 10th, 11th & 12th examination in upcoming year 2016. For 2016 examinations we are providing you CBSE board syllabus2014 for Class 9th, 10th, 11th & 12th.
+
+              </p>
+              
+          </div>
+        </div>
+      </div>
+    </section>
     <section className="bg-[#f5f5f5] py-10 md:py-12">
       <div className="mx-auto w-[min(1320px,calc(100%-24px))] md:w-[min(1320px,calc(100%-40px))]">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
           {/* Left */}
           <div>
             <h2 className="text-[30px] font-bold leading-tight text-[#0f5ca8] md:text-[40px]">
-                Foundations
+                TUITIONS (SB & CBSE)
             </h2>
 
             <p className="mt-6 max-w-[860px] text-[16px] leading-[1.7] text-black md:text-[17px]">
@@ -108,43 +144,7 @@ export default function TuitionSection() {
         </div>
       </div>
     </section>
-     <section className="relative w-full overflow-hidden">
-      
-      {/* Background Image */}
-      <div
-        className="relative min-h-[420px] md:min-h-[520px] bg-center bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: "url('/assets/neet-bg.png')",
-        }}
-      >
-        {/* 🔥 Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/40"></div>
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto max-w-[1200px] px-6 py-14 md:py-20">
-          
-          {/* Glass Card */}
-          <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-[24px] p-6 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.25)]">
-            
-            {/* Title */}
-            <h2 className="text-center font-serif text-[32px] md:text-[48px] text-white">
-              CBSE NCERT Syllabus 2016 – 2019
-
-            </h2>
-
-            {/* Divider */}
-            <div className="mx-auto mt-4 h-[3px] w-20 bg-yellow-400 rounded-full"></div>
-
-            {/* Content */}
-            <p className="mt-8 text-center text-[14px] md:text-[16px] leading-[1.9] text-white/90">
-              Latest CBSE Syllabus for Vocational courses effective for the Academic Session 2016 – 2019 for classes 9th, 10th, 11th and 12th. The vocational subject can be offered as an additional (optional) subject in combination with five core Academic subjects. The CGPA of class IX and X will be calculated based on the grade obtained in five academic subjects and grade obtained in vocational subject will be reflected under additional (optional)subject. OR Vocational subject can be offered as additional (compulsory) subject with five core Academic subjects (Rationalized version). The CGPA of Class IX / X will be calculatedbased on the grade obtained in all six subjects, if vocational subject is taken as additional (compulsory) sixth subject Central Board of Secondary Education (CBSE) board will conduct class 9th, 10th, 11th & 12th examination in upcoming year 2016. For 2016 examinations we are providing you CBSE board syllabus2014 for Class 9th, 10th, 11th & 12th.
-
-              </p>
-              
-          </div>
-        </div>
-      </div>
-    </section>
+    
   </>
    
   );

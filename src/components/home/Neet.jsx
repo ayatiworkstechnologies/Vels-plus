@@ -33,7 +33,7 @@ export default function NeetSection() {
             <div className="order-2 lg:order-1">
               <div className="pr-0 lg:pr-4">
                 {/* Title */}
-                <h2 className="font-primary text-[34px] leading-none text-[#181818] sm:text-[42px] lg:text-[48px]">
+                <h2 className="font-primary text-3xl text-[#222] md:text-4xl">
                   NEET
                 </h2>
 

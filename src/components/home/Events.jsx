@@ -60,7 +60,7 @@ export default function EventsExact() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-16" id="events">
-      <h2 className="mb-10 text-center text-4xl tracking-tight primary-title">News & Events</h2>
+      <h2 className="mb-10 text-center font-primary text-3xl text-[#222] md:text-4xl">News & Events</h2>
 
       <div className="relative">
         <div

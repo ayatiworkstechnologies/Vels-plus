@@ -8,7 +8,7 @@ const facilities = [
     title: "LIBRARY",
     subtitle: "Conducted by National Testing Agency(NTA)",
     description: "Our academy has a distinctive library, where students can get instant reference. Library also comprises of past year medical/engineering entrance examinations model question papers.",
-    image: "/assets/image-1.png",
+    image: "/assets/library.jpg",
     // Top right card
     gridClass: "md:col-start-2 md:col-span-1 md:row-span-1"
   },
@@ -17,7 +17,7 @@ const facilities = [
     title: "TAMIL MEDIUM STUDENTS",
     subtitle: "Conducted by National Testing Agency(NTA)",
     description: "TN Government has announced that NEET Entrance can be written in both English & Tamil. Hence, our academy ensures that Tamil medium students too get an exclusive coaching for NEET entrance with our unique teaching methodology in Tamil language.",
-    image: "/assets/image-3.png",
+    image: "/assets/tamil.png",
     // Tall card on the far right
     gridClass: "md:col-start-3 md:col-span-1 md:row-span-2 h-full"
   },
@@ -26,7 +26,7 @@ const facilities = [
     title: "PERSONALIZED CARE",
     subtitle: "Conducted by National Testing Agency(NTA)",
     description: "Ultimately, student can get experience of individual tutoring for close follow up with high attention, dedication, doubt clarifying/interactive sessions, perfect class coordination, reasoning tests with immediate explanations, week-end cumulative tests, monthly tests, online model exams and many other programs which extracts the students ability maximum to reach their goal.",
-    image: "/assets/image-2.png",
+    image: "/assets/personalized-care.jpg",
     // Wide card at the bottom
     gridClass: "md:col-start-1 md:col-span-2 md:row-span-1"
   }
@@ -91,7 +91,7 @@ const FacilitiesGrid = () => {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="relative bg-white w-full max-w-5xl overflow-hidden flex flex-col md:flex-row shadow-2xl z-10 rounded-sm"
+              className="relative bg-white w-full max-w-5xl overflow-hidden flex flex-col md:flex-row z-10 rounded-[22px] border-2 border-white bg-[#f3f3f3] shadow-[0_14px_35px_rgba(0,0,0,0.10)]e"
             >
               {/* Popup Left: Image (Matches popup-1 design) */}
               <div className="md:w-1/2 h-[300px] md:h-[450px]">

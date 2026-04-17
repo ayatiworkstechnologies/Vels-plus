@@ -4,12 +4,18 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
 const highlights = [
-  { id: 1, img: "/assets/neet.png" }, // Place your images in the public/assets folder
-  { id: 2, img: "/assets/neet.png" },
-  { id: 3, img: "/assets/neet.png" },
-  { id: 4, img: "/assets/neet.png" },
-  { id: 5, img: "/assets/neet.png" },
-  { id: 6, img: "/assets/neet.png" },
+  { id: 1, img: "/assets/slide-1.png" }, // Place your images in the public/assets folder
+  { id: 2, img: "/assets/slide-2.png" },
+  { id: 3, img: "/assets/slide-3.png" },
+  { id: 4, img: "/assets/slide-4.png" },
+  { id: 5, img: "/assets/slide-5.png" },
+  { id: 6, img: "/assets/slide-6.png" },
+  { id: 7, img: "/assets/slide-7.png" },
+  { id: 8, img: "/assets/slide-8.png" },
+  { id: 9, img: "/assets/slide-9.png" },
+  { id: 10, img: "/assets/slide-10.png" },
+  { id: 11, img: "/assets/slide-11.png" },
+ 
 ];
 
 const FacilityHighlights = () => {

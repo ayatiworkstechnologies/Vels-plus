@@ -10,7 +10,7 @@ const slides = [
     title: "Our Vision",
     description:
       "To be a leading educational institution that nurtures intellectual curiosity, innovation, and excellence, empowering students with the knowledge and skills required to succeed in a rapidly evolving global landscape.",
-    image: "/assets/vision.jpg",
+    image: "/assets/our-vision.jpg",
   },
   {
     key: "mission",
@@ -21,7 +21,7 @@ const slides = [
       "To prepare students for national and international competitive examinations such as NEET, IIT-JEE, and Olympiads.",
       "To foster a supportive academic environment that promotes personal growth, discipline, and lifelong learning.",
     ],
-    image: "/assets/mission.jpg",
+    image: "/assets/our-mission.jpg",
   },
 ];
 

@@ -87,7 +87,7 @@ export default function BlogSection() {
   return (
     <section className="w-full bg-[#f5f5f5] py-14 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-primary text-gray-900 mb-10">
+        <h2 className="font-primary text-3xl text-[#222] md:text-4xl text-gray-900 mb-10">
           Blogs
         </h2>
 

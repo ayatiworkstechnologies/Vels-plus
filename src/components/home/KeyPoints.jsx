@@ -118,7 +118,7 @@ export default function KeyPoints() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-primary text-4xl font-bold uppercase tracking-tight text-black">
+            <h2 className="font-primary text-3xl text-[#222] md:text-4xl">
               Key Points
             </h2>
           </motion.div>

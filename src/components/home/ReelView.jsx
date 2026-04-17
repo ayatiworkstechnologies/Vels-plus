@@ -48,7 +48,7 @@ const FoundationsSection = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-4xl font-primary font-semibold text-gray-900 mb-6 tracking-tight">
+          <h2 className="font-primary text-3xl text-[#222] md:text-4xl mb-4">
             Strong Foundations for Academic Excellence
           </h2>
           <div className="max-w-3xl mx-auto space-y-4 text-gray-600 font-secondary font-light text-lg leading-relaxed">

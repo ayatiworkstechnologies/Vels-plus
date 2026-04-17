@@ -38,7 +38,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-[550px] md:h-[650px] lg:h-[720px] overflow-hidden text-white">
+    <section className="relative w-full h-[550px] md:h-[650px] lg:h-[600px] overflow-hidden text-white">
       
       {/* ===== Desktop Slider ===== */}
       <div className="absolute inset-0 z-0 hidden md:block">
@@ -98,10 +98,7 @@ export default function Hero() {
               <span className="text-[#22C55E]">success...</span>
             </h1>
 
-            {/* Slide Number */}
-            <p className="mt-4 sm:mt-5 md:mt-6 text-black text-sm sm:text-base md:text-lg opacity-80">
-              01
-            </p>
+            
           </motion.div>
 
         </div>

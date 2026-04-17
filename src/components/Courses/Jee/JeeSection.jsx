@@ -88,8 +88,8 @@ export default function NeetMedicalBanner() {
           >
             <div className="relative aspect-[4/5] w-full">
               <Image
-                src="/assets/neet.png"
-                alt="NEET Eligibility"
+                src="/assets/jee-2020.png"
+                alt="JEE Eligibility"
                 fill
                 priority
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

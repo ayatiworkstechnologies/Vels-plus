@@ -64,7 +64,7 @@ export default function TestimonialExtract() {
         <div className="mb-12 max-w-2xl">
           <div className="mb-4 text-5xl leading-none text-neutral-800">“</div>
 
-          <h2 className="text-3xl font-primary font-semibold tracking-tight text-neutral-900 md:text-5xl">
+          <h2 className="font-primary text-3xl text-[#222] md:text-4xl">
             Why Clients Realy on Us
           </h2>
 

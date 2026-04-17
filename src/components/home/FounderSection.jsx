@@ -39,7 +39,7 @@ const FounderSection = () => {
           variants={fadeInUp}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-primary font-bold tracking-widest text-gray-800 mb-6 uppercase">
+          <h2 className="font-primary text-3xl text-[#222] md:text-4xl text-gray-900 mb-4">
             Founder & Chairman
           </h2>
           <div className="space-y-1 text-gray-600 text-xl font-secondary font-light">
@@ -115,7 +115,7 @@ const FounderSection = () => {
         >
           <button 
             onClick={() => setIsOpen(true)}
-            className="bg-[#303395] hover:bg-[#1e2060] text-white px-10 py-3 text-sm font-bold transition-all duration-300 shadow-lg"
+            className="bg-[#303395] hover:bg-[#1e2060] text-white px-10 py-3 text-sm font-bold transition-all duration-300 shadow-lg rounded-full"
           >
             More Detail
           </button>
