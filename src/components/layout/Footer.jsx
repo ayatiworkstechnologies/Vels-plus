@@ -136,11 +136,25 @@ export default function VelsPlusFooter() {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-12 border-t border-white/20 py-5 flex flex-col sm:flex-row justify-between items-center text-sm">
-          <p>© 2026 | All Rights Reserved | Vels Plus</p>
+<div className="mt-12 border-t border-white/20 py-5 flex flex-col sm:flex-row justify-between items-center text-sm gap-2">
 
-          
-        </div>
+  <p className="text-white/80">
+    © 2026 | All Rights Reserved | Vels Plus
+  </p>
+
+  <p className="text-white/70">
+    Design & Developed by{" "}
+    <a
+      href="https://ayatiworks.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold text-white hover:text-cyan-300 transition"
+    >
+      Ayatiworks
+    </a>
+  </p>
+
+</div>
       </div>
     </footer>
   );

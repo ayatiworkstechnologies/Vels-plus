@@ -65,25 +65,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ===== Scroll Button ===== */}
-      <motion.button
-        onClick={handleClick}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 p-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-black transition duration-300"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 1.6 }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </motion.button>
+
 
     </section>
   );
