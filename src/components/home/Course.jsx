@@ -7,7 +7,7 @@ const courses = [
     desc: "Focused NEET preparation for future medical success.",
     image:
       "/assets/medical.png",
-    link: "#",
+    link: "/neet",
   },
   {
     id: 2,
@@ -15,23 +15,16 @@ const courses = [
     desc: "Strong concepts for engineering entrance success.",
     image:
       "/assets/iit.png",
-    link: "#",
+    link: "/jee",
   },
-  {
-    id: 3,
-    title: "FOUNDATIONS",
-    desc: "Building basics in mathematics and science.",
-    image:
-      "/assets/found.png",
-    link: "#",
-  },
+
   {
     id: 4,
     title: "TUITIONS(SB & CBSE)",
     desc: "Focused support for school board excellence.",
     image:
       "/assets/cbse.png",
-    link: "#",
+    link: "/tuitions",
   },
 ];
 
@@ -56,40 +49,46 @@ export default function Course() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {courses.map((course) => (
-            <div
-              key={course.id}
-              className="group rounded-[22px] border border-[#e7e2d8] bg-white p-3 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_38px_rgba(0,0,0,0.10)]"
-            >
-              <div className="overflow-hidden rounded-[18px] border border-[#d9d3c7] bg-[#f3f0ea]">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="h-48 w-full rounded-[18px] object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
+<div className="max-w-6xl mx-auto">
 
-              <div className="px-1 pb-2 pt-4">
-                <h3 className="font-primary text-[17px] font-semibold uppercase tracking-[0.02em] text-[#222]">
-                  {course.title}
-                </h3>
+  <div className="grid gap-6 justify-center
+                  grid-cols-1 sm:grid-cols-2 
+                  lg:grid-cols-[repeat(auto-fit,minmax(250px,250px))]">
 
-                <p className="mt-2 text-sm leading-6 text-[#7a7a7a]">
-                  {course.desc}
-                </p>
-
-                <a
-                  href={course.link}
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#2e4ea1] transition hover:text-[#1d3572]"
-                >
-                  Read More
-                  <span className="text-base">›</span>
-                </a>
-              </div>
-            </div>
-          ))}
+    {courses.map((course) => (
+      <div
+        key={course.id}
+        className="group w-[250px] rounded-[22px] border border-[#e7e2d8] bg-white p-3 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_38px_rgba(0,0,0,0.10)]"
+      >
+        <div className="overflow-hidden rounded-[18px] border border-[#d9d3c7] bg-[#f3f0ea]">
+          <img
+            src={course.image}
+            alt={course.title}
+            className="h-48 w-full rounded-[18px] object-cover transition duration-500 group-hover:scale-105"
+          />
         </div>
+
+        <div className="px-1 pb-2 pt-4">
+          <h3 className="font-primary text-[17px] font-semibold uppercase text-[#222]">
+            {course.title}
+          </h3>
+
+          <p className="mt-2 text-sm text-[#7a7a7a]">
+            {course.desc}
+          </p>
+
+          <a
+            href={course.link}
+            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white bg-primary py-2 px-4 rounded-full transition duration-300 hover:bg-[#2e4ea1] hover:text-white"
+          >
+            Read More 
+          </a>
+        </div>
+      </div>
+    ))}
+
+  </div>
+</div>
       </div>
     </section>
   );

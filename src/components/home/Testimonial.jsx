@@ -58,12 +58,10 @@ export default function TestimonialExtract() {
   };
 
   return (
-    <section className="w-full bg-[#f7f7f5] py-16 md:py-24 overflow-hidden">
+    <section className="w-full bg-[#f7f7f5] py-4 md:py-12 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 max-w-2xl">
-          <div className="mb-4 text-5xl leading-none text-neutral-800">“</div>
-
+        <div className="mb-2 max-w-2xl">
           <h2 className="font-primary text-3xl text-[#222] md:text-4xl">
             Why Clients Realy on Us
           </h2>
