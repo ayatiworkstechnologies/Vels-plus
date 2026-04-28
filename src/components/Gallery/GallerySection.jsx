@@ -14,30 +14,30 @@ const galleryImages = [
   { src: "/assets/gal-14.webp", colSpan: "md:col-span-3", rowSpan: "md:row-span-1" },
 ];
 
-/* ===================== ORIENTATION (SAME STYLE) ===================== */
+/* ===================== ORIENTATION ===================== */
 const orientationImages = [
-  { src: "/assets/img-1.jpg", colSpan: "md:col-span-3", rowSpan: "md:row-span-2" },
-  { src: "/assets/img-2.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-2" },
-  { src: "/assets/img-3.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-2" },
-  { src: "/assets/img-4.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-2" },
-  { src: "/assets/img-5.jpg", colSpan: "md:col-span-2", rowSpan: "md:row-span-2" },
-  { src: "/assets/img-6.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-7.jpg", colSpan: "md:col-span-3", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-8.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-9.jpg", colSpan: "md:col-span-2", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-10.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-11.jpg", colSpan: "md:col-span-2", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-12.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-13.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-14.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-15.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-16.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-17.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-18.jpg", colSpan: "md:col-span-2", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-19.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
-  { src: "/assets/img-20.jpg", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
+  { src: "/assets/img-1.jpg" },
+  { src: "/assets/img-2.jpg" },
+  { src: "/assets/img-3.jpg" },
+  { src: "/assets/img-4.jpg" },
+  { src: "/assets/img-5.jpg" },
+  { src: "/assets/img-6.jpg" },
+  { src: "/assets/img-8.jpg" },
+  { src: "/assets/img-9.jpg" },
+  { src: "/assets/img-10.jpg" },
+  { src: "/assets/img-11.jpg" },
+  { src: "/assets/img-12.jpg" },
+  { src: "/assets/img-13.jpg" },
+  { src: "/assets/img-14.jpg" },
+  { src: "/assets/img-15.jpg" },
+  { src: "/assets/img-16.jpg" },
+  { src: "/assets/img-17.jpg" },
+  { src: "/assets/img-18.jpg" },
+  { src: "/assets/img-19.jpg" },
+  { src: "/assets/img-20.jpg" },
 ];
 
+/* ===================== CSS GRID (Gallery) ===================== */
 function ImageGrid({ images, openModal }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[160px] md:auto-rows-[180px]">
@@ -53,6 +53,32 @@ function ImageGrid({ images, openModal }) {
             fill
             className="object-cover hover:scale-105 transition duration-500"
           />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ===================== MASONRY (Orientation) ===================== */
+function MasonryGrid({ images, openModal }) {
+  return (
+    <div
+      className="[column-count:2] md:[column-count:3] [column-gap:8px]"
+    >
+      {images.map((img, i) => (
+        <div
+          key={i}
+          onClick={() => openModal(images, i)}
+          className="relative overflow-hidden rounded-xl cursor-pointer group mb-2 break-inside-avoid"
+        >
+          <Image
+            src={img.src}
+            alt="orientation"
+            width={400}
+            height={300}
+            className="w-full h-auto object-cover block transition duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 rounded-xl" />
         </div>
       ))}
     </div>
@@ -84,7 +110,7 @@ export default function GalleryOrientation() {
       {/* HEADER */}
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 font-primary">
-         Photo Gallery
+          Photo Gallery
         </h2>
         <p className="text-gray-500">
           A glimpse into our vibrant campus life and events.
@@ -116,7 +142,7 @@ export default function GalleryOrientation() {
         <ImageGrid images={galleryImages} openModal={openModal} />
       )}
       {activeTab === "orientation" && (
-        <ImageGrid images={orientationImages} openModal={openModal} />
+        <MasonryGrid images={orientationImages} openModal={openModal} />
       )}
 
       {/* ================= MODAL ================= */}
@@ -152,9 +178,9 @@ export default function GalleryOrientation() {
                     modal.images.length,
                 })
               }
-              className="text-white bg-white/20 px-4 py-2 rounded"
+              className="text-white bg-white/20 hover:bg-white/30 px-4 py-2 rounded transition"
             >
-              Prev
+              ← Prev
             </button>
 
             <button
@@ -164,9 +190,9 @@ export default function GalleryOrientation() {
                   index: (modal.index + 1) % modal.images.length,
                 })
               }
-              className="text-white bg-white/20 px-4 py-2 rounded"
+              className="text-white bg-white/20 hover:bg-white/30 px-4 py-2 rounded transition"
             >
-              Next
+              Next →
             </button>
           </div>
 
@@ -176,8 +202,10 @@ export default function GalleryOrientation() {
               <div
                 key={i}
                 onClick={() => setModal({ ...modal, index: i })}
-                className={`relative w-20 h-16 flex-shrink-0 cursor-pointer border-2 ${
-                  modal.index === i ? "border-white" : "border-transparent"
+                className={`relative w-20 h-16 flex-shrink-0 cursor-pointer border-2 rounded transition ${
+                  modal.index === i
+                    ? "border-white"
+                    : "border-transparent opacity-60 hover:opacity-100"
                 }`}
               >
                 <Image
@@ -189,7 +217,6 @@ export default function GalleryOrientation() {
               </div>
             ))}
           </div>
-
         </div>
       )}
     </section>

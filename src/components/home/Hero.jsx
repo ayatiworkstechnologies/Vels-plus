@@ -11,6 +11,8 @@ const desktopSlides = [
   { img: "/assets/banner/web-1.png" },
   { img: "/assets/banner/web-2.png" },
   { img: "/assets/banner/web-3.png" },
+  { img: "/assets/banner/banner-5.png" },
+  { img: "/assets/banner/banner-6.png" },
 ];
 
 // Mobile
@@ -18,6 +20,8 @@ const mobileSlides = [
   { img: "/assets/banner/mob-1.png" },
   { img: "/assets/banner/mob-2.png" },
   { img: "/assets/banner/mob-3.png" },
+  { img: "/assets/banner/mob-5.png" },
+  { img: "/assets/banner/mob-6.png" },
 ];
 
 export default function Hero() {
