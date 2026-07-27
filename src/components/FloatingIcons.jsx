@@ -25,20 +25,20 @@ export default function FloatingActions() {
     e.preventDefault();
 
     try {
-      const res = await fetch(
-        "https://api.ayatiworks.com/api/v1/public/vels-plus/admission_enquiry/records",
-        {
+      const res = await fetch("/api/admission-enquiry", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "X-API-Key":
-              "c7161b606e6aa8479d3d52640e17c5c95b83dcf576e39cb5fc57dba7ef7a7e39",
           },
           body: JSON.stringify({
-            data: formData,
+            data: {
+              name: formData.name,
+              email_id: formData.email,
+              phone_number: Number(formData.phone),
+              message: formData.message,
+            },
           }),
-        }
-      );
+        });
 
       const result = await res.json();
 
