@@ -7,20 +7,21 @@ import HeroSection from "../../components/Theatre/HeroSection";
 import FaqTheatre from "../../components/Theatre/Faq";
 import Find from "../../components/Theatre/Find";
 
-
-const siteTitle = "Theatre | Vels Film City Chennai | Media and Entertainment Hub";
-const siteDescription = "Explore the theatre facilities at Vels Film City in Chennai, featuring state-of-the-art auditoriums, advanced sound and lighting systems, and comfortable seating for an unparalleled entertainment experience.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "Audio-Visual Seminar Halls & Auditoriums | Vels Plus Academy";
+const siteDescription = "Explore the audio-visual seminar halls, interactive learning auditoriums, and workshop spaces at Vels Plus Academy in Chennai.";
+const siteImage = "/assets/theare.webp";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    alternates: {
+        canonical: "/theatre",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/theatre",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "Vels Plus Learning Auditoriums" }],
         type: 'website',
     },
     twitter: {
@@ -29,9 +30,9 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
-export default function theatre() {
+
+export default function TheatrePage() {
   return (
     <>
         <HeroSection />

@@ -12,20 +12,21 @@ import Stats from "../../components/Outdoor/Stats";
 import SustainabilityTabs from "../../components/Outdoor/SustainabilityTabs";
 import WhyChooseVels from "../../components/Outdoor/WhyChooseVels";
 
-
-const siteTitle = "Outdoor | Vels Film City Chennai | Media and Entertainment Hub";
-const siteDescription = "Explore the outdoor filming facilities at Vels Film City in Chennai, featuring expansive sets, natural landscapes, and versatile locations for all your production needs.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "Outdoor Campus Spaces | Vels Plus Academy";
+const siteDescription = "Discover the outdoor campus spaces, recreation areas, and vibrant educational environment at Vels Plus Academy in Chennai.";
+const siteImage = "/assets/facilities.png";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    alternates: {
+        canonical: "/outdoor",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/outdoor",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "Vels Plus Outdoor Campus Facilities" }],
         type: 'website',
     },
     twitter: {
@@ -34,10 +35,9 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
 
-export default function outdoor() {
+export default function OutdoorPage() {
   return (
     <>
         <Hero />

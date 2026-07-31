@@ -1,25 +1,24 @@
 import Hero from "../../components/About/Hero";
-import Feature from "../../components/home/Feature";
 import OurLegacy from "../../components/About/OurLegacy";
 import VisionMission from "../../components/About/VisionMission";
 import Values from "../../components/About/Values";
-import VelsEcosystem from "../../components/About/VelsEcosystem";
 import Slide from "../../components/About/Slide";
 
-
-const siteTitle = "About Us  | Vels Film City Chennai | Media and Entertainment Hub";
-const siteDescription = "Discover Vels Film City in Chennai, a premier media and entertainment hub offering state-of-the-art facilities for film production, events, and more.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "About Us | Vels Plus Academy - Academic Excellence in Chennai";
+const siteDescription = "Learn about Vels Plus Academy, Chennai's trusted educational coaching institute for NEET, IIT-JEE, and CBSE/State Board school tuitions. Discover our vision, mission, legacy, and expert faculty.";
+const siteImage = "/assets/about.png";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    alternates: {
+        canonical: "/about",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/about",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "About Vels Plus Academy" }],
         type: 'website',
     },
     twitter: {
@@ -28,20 +27,16 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
 
-export default function about() {
+export default function About() {
   return (
     <>
         <Hero />
         <OurLegacy />
-         <Slide />
-          <Values />
+        <Slide />
+        <Values />
         <VisionMission />
-       
-       
     </>
-    
   );
 }

@@ -1,20 +1,29 @@
 import Hero from "../../components/Courses/Neet/Hero";
 import NeetSection from "../../components/Courses/Neet/NeetSection";
 
-
-const siteTitle = "Neet / Medical - Vels Plus Coaching in Chennai | NEET Preparation";
-const siteDescription = "Prepare for NEET / Medical with Vels Plus in Chennai. Expert coaching, comprehensive study materials, and a proven track record of success in NEET exams. Join us to achieve your medical dreams.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "NEET Coaching in Chennai | Vels Plus Medical Entrance Academy";
+const siteDescription = "Top-rated NEET Coaching in Chennai at Vels Plus. Comprehensive Medical Entrance preparation, expert doctors & subject specialists, regular mock test series, and dedicated doubt-clearing sessions.";
+const siteImage = "/assets/neet.png";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    keywords: [
+        "NEET coaching Chennai",
+        "best NEET academy Anna Nagar",
+        "NEET UG coaching Velachery",
+        "medical entrance coaching Chennai",
+        "NEET repeater batch Chennai",
+        "Vels Plus NEET coaching"
+    ],
+    alternates: {
+        canonical: "/neet",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/neet",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "NEET Medical Entrance Coaching at Vels Plus" }],
         type: 'website',
     },
     twitter: {
@@ -23,17 +32,13 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
 
-export default function neet() {
+export default function NeetPage() {
   return (
     <>
         <Hero />
         <NeetSection />
-       
-       
     </>
-    
   );
 }

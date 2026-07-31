@@ -3,18 +3,12 @@
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import Navbar from '../components/layout/Navbar'; 
 import ScrollToTop from '../components/layout/ScrollToTop';
 import FloatingIcons from '../components/FloatingIcons';
+import JsonLd from '../components/seo/JsonLd';
 import type { ReactNode } from "react";
 import localFont from "next/font/local";
-import CanonicalLink from '../components/layout/CanonicalLink'; // Assuming this component exists
-
-// 🚨 NOTE: These imports should ideally be in app/page.jsx
-
-
-// Define the root canonical path here
-const canonicalPath = '/'; 
+import type { Metadata, Viewport } from "next";
 
 // --- FONT LOADING ---
 const foundersGrotesk = localFont({
@@ -35,33 +29,80 @@ const Baskervville = localFont({
     display: "swap",
 });
 
-// --- METADATA API (Next.js-Idiomatic SEO) ---
-const siteTitle = "Vels Plus";
-const siteDescription = "";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://velsplus.com';
+const defaultTitle = "Vels Plus | Best NEET, JEE & Tuition Coaching Centre in Chennai";
+const defaultDescription = "Vels Plus offers expert academic coaching for NEET UG, IIT-JEE (Main & Advanced), CBSE & State Board Tuitions, and Foundation courses in Chennai (Anna Nagar, Perambur, Velachery, Tambaram).";
 
-export const metadata = {
-    title: siteTitle,
-    description: siteDescription,
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    themeColor: '#2f3192',
+};
+
+// --- METADATA API (Next.js-Idiomatic SEO) ---
+export const metadata: Metadata = {
+    metadataBase: new URL(siteUrl),
+    title: {
+        default: defaultTitle,
+        template: "%s | Vels Plus - Coaching Centre Chennai",
+    },
+    description: defaultDescription,
+    keywords: [
+        "Vels Plus",
+        "NEET coaching Chennai",
+        "IIT JEE coaching Chennai",
+        "CBSE tuitions Chennai",
+        "State Board tuitions Chennai",
+        "NEET medical entrance coaching",
+        "JEE main advanced coaching",
+        "best tuition centre Anna Nagar",
+        "tuition centre Velachery",
+        "tuition centre Perambur",
+        "tuition centre Tambaram"
+    ],
+    authors: [{ name: "Vels Plus Academy", url: siteUrl }],
+    creator: "Vels Plus",
+    publisher: "Ayatiworks",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    alternates: {
+        canonical: '/',
+    },
     openGraph: {
-        title: siteTitle,
-        description: siteDescription,
+        title: defaultTitle,
+        description: defaultDescription,
         url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        siteName: "Vels Plus Coaching Institute",
+        images: [
+            {
+                url: '/assets/hero-banner.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Vels Plus Coaching Institute Chennai',
+            },
+        ],
+        locale: 'en_IN',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
-        title: siteTitle,
-        description: siteDescription,
-        images: [siteImage],
+        title: defaultTitle,
+        description: defaultDescription,
+        images: ['/assets/hero-banner.jpg'],
+        creator: '@velsplus',
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
 
 // --- ROOT LAYOUT COMPONENT ---
-
 interface RootLayoutProps {
     children: ReactNode;
 }
@@ -69,14 +110,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en" className={`${foundersGrotesk.variable} ${Baskervville.variable}`}>
-            <CanonicalLink path={canonicalPath} /> 
-            
-            {/* 🚀 FIX: Changed 'bg-white-100' to the correct Tailwind class 'bg-white' */}
             <body className="bg-white text-gray-900 font-sans">
-                
-               <Header />
-                {/* Main content area (This is where app/page.jsx or any other page component renders) */}
-                <main className="">{children}</main>
+                <JsonLd />
+                <Header />
+                <main>{children}</main>
                 <FloatingIcons />
                 <ScrollToTop />
                 <Footer />

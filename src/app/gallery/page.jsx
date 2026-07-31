@@ -1,20 +1,21 @@
 import PhotoGallery from "../../components/Gallery/GallerySection";
 import Hero from "../../components/Gallery/Hero";
 
-
-const siteTitle = "Gallery  | Vels Film City Chennai | Media and Entertainment Hub";
-const siteDescription = "Explore our gallery at Vels Film City in Chennai, showcasing stunning visuals from our film productions, events, and facilities.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "Photo Gallery | Vels Plus Campus Life & Student Highlights";
+const siteDescription = "Browse photos of Vels Plus classrooms, interactive laboratory sessions, student celebrations, and academic achievements across our Chennai coaching centers.";
+const siteImage = "/assets/gal-1.webp";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    alternates: {
+        canonical: "/gallery",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/gallery",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "Vels Plus Photo Gallery" }],
         type: 'website',
     },
     twitter: {
@@ -23,16 +24,13 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
 
-export default function about() {
+export default function GalleryPage() {
   return (
     <>
-     <Hero />
-     <PhotoGallery />
-       
+      <Hero />
+      <PhotoGallery />
     </>
-    
   );
 }

@@ -1,21 +1,21 @@
 import Hero from "../../components/Contact/Hero.jsx";
 import ContactTabs from "../../components/Contact/ContactPage.jsx";
 
-
-
-const siteTitle = "Contact Us | Vels Film City Chennai | Media and Entertainment Hub";
-const siteDescription = "Get in touch with Vels Film City in Chennai for inquiries about our state-of-the-art film production facilities, event hosting, and more.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "Contact Us | Vels Plus Academy Chennai Admissions";
+const siteDescription = "Contact Vels Plus Coaching Institute in Chennai for NEET, JEE, and School Tuition admissions. Visit our centers in Anna Nagar, Perambur, Velachery, or Tambaram, or call +91 8925905619.";
+const siteImage = "/assets/hero-banner.jpg";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    alternates: {
+        canonical: "/contact",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/contact",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "Contact Vels Plus Coaching Institute" }],
         type: 'website',
     },
     twitter: {
@@ -24,14 +24,13 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
-export default function contact() {
+
+export default function ContactPage() {
   return (
     <>
         <Hero />
         <ContactTabs />
-       
     </>
   );
 }

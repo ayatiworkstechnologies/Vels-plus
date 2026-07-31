@@ -101,11 +101,11 @@ export default function VelsPlusFooter() {
 
   {/* Phone */}
   <a
-    href="tel:+919940582758"
+    href="tel:+918925905619"
     className="flex items-center gap-3 hover:text-cyan-300 transition"
   >
     <Phone size={18} />
-    <span>+91 99405 82758</span>
+    <span>+91 89259 05619</span>
   </a>
 
   {/* Email */}

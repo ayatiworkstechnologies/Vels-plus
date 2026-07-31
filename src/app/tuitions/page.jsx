@@ -1,20 +1,29 @@
-
 import Hero from "../../components/Courses/Tuitions/Hero";
 import TuitionSection from "../../components/Courses/Tuitions/TuitionSection";
 
-const siteTitle = "IIT - JEE - Vels Plus Coaching in Chennai | JEE Preparation";
-const siteDescription = "Prepare for IIT - JEE with Vels Plus in Chennai. Expert coaching, comprehensive study materials, and a proven track record of success in JEE exams. Join us to achieve your engineering dreams.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "CBSE & State Board Tuitions in Chennai | Vels Plus Academy";
+const siteDescription = "Expert CBSE & State Board Tuitions for Classes 6th to 12th in Chennai. Specialized coaching in Mathematics, Physics, Chemistry, and Biology with personalized guidance at Vels Plus.";
+const siteImage = "/assets/cbse.png";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    keywords: [
+        "CBSE tuitions Chennai",
+        "State Board tuitions Chennai",
+        "Class 10 tuition Anna Nagar",
+        "Class 12 Physics Chemistry Maths tuition",
+        "best tuition centre Velachery",
+        "school tuitions Perambur Tambaram"
+    ],
+    alternates: {
+        canonical: "/tuitions",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/tuitions",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "School Tuitions at Vels Plus Chennai" }],
         type: 'website',
     },
     twitter: {
@@ -23,16 +32,13 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
 
-export default function neet() {
+export default function TuitionsPage() {
   return (
     <>
         <Hero />
         <TuitionSection />
-       
     </>
-    
   );
 }

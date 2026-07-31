@@ -1,19 +1,21 @@
 import BasicsEssential from "../../components/Faq/BasicEssential";
 import Hero from "../../components/Faq/Hero";
 
-const siteTitle = "FAQ | Vels Film City Chennai | Media and Entertainment Hub";
-const siteDescription = "Find answers to common questions about Vels Film City in Chennai, your premier media and entertainment hub with state-of-the-art film production facilities.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "Frequently Asked Questions (FAQ) | Vels Plus Academy";
+const siteDescription = "Find answers to frequently asked questions about Vels Plus NEET, IIT-JEE, and CBSE/State Board Tuitions admissions, course structure, fee details, and batch schedules in Chennai.";
+const siteImage = "/assets/hero-banner.jpg";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    alternates: {
+        canonical: "/faq",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/faq",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "Vels Plus FAQ" }],
         type: 'website',
     },
     twitter: {
@@ -22,10 +24,9 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
 
-export default function faq() {
+export default function FaqPage() {
   return (
     <>
         <Hero />

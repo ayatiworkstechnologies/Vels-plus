@@ -155,8 +155,8 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="font-bold text-gray-900">Office Phone</h3>
-                <a href="tel:+919940582758" className="text-gray-600">
-                  +91 99405 82758
+                <a href="tel:+918925905619" className="text-gray-600">
+                  +91 89259 05619
                 </a>
               </div>
             </div>

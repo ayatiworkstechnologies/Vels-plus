@@ -12,20 +12,21 @@ import IndoorTabs from "../../components/Indoor/IndoorTabs";
 import WhyChooseVels from "../../components/Indoor/WhyChooseVels";
 import HeroSection from "../../components/Indoor/HeroSection";
 
-
-const siteTitle = "Indoor | Vels Film City Chennai | Media and Entertainment Hub";
-const siteDescription = "Explore the indoor filming facilities at Vels Film City in Chennai, featuring state-of-the-art studios, advanced equipment, and versatile sets for all your production needs.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "Indoor Campus Facilities | Vels Plus Academy";
+const siteDescription = "Explore the indoor facilities and modern learning environments at Vels Plus Academy in Chennai, designed for maximum focus, academic comfort, and interactive education.";
+const siteImage = "/assets/inspired_indoors.webp";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    alternates: {
+        canonical: "/indoor",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/indoor",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "Vels Plus Indoor Learning Spaces" }],
         type: 'website',
     },
     twitter: {
@@ -34,12 +35,12 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
-export default function outdoor() {
+
+export default function IndoorPage() {
   return (
     <>
-         <HeroSection />
+        <HeroSection />
         <OutdoorFliming />
         <Stats />
         <FilmStudio />

@@ -3,20 +3,21 @@ import VelsPlus from "../../components/Facilities/VelsPlus";
 import FacilitiesGrid from "../../components/Facilities/FacilitiesGrid";
 import FacilityHighlights from "../../components/Facilities/FacilityHighlights";
 
-
-const siteTitle = "Vels Facilities - Vels Plus Coaching in Chennai";
-const siteDescription = "Discover the state-of-the-art facilities at Vels Plus Coaching in Chennai. Our modern classrooms, well-equipped labs, and comfortable study areas provide the perfect environment for JEE, NEET, and CBSE preparation. Experience the best learning atmosphere with us.";
-const siteUrl = 'https://yourwebsite.com';
-const siteImage = 'https://yourwebsite.com/default-share-image.jpg';
+const siteTitle = "Campus & Infrastructure | Vels Plus Facilities in Chennai";
+const siteDescription = "Explore the state-of-the-art educational infrastructure at Vels Plus. Smart interactive classrooms, science labs, air-conditioned study rooms, and modern learning amenities for NEET, JEE & Tuition students.";
+const siteImage = "/assets/facilities.png";
 
 export const metadata = {
     title: siteTitle,
     description: siteDescription,
+    alternates: {
+        canonical: "/facilities",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
-        url: siteUrl,
-        images: [{ url: siteImage, width: 1200, height: 630, alt: siteTitle }],
+        url: "/facilities",
+        images: [{ url: siteImage, width: 1200, height: 630, alt: "Vels Plus Learning Facilities in Chennai" }],
         type: 'website',
     },
     twitter: {
@@ -25,19 +26,15 @@ export const metadata = {
         description: siteDescription,
         images: [siteImage],
     },
-    viewport: 'width=device-width, initial-scale=1',
 };
 
-export default function about() {
+export default function FacilitiesPage() {
   return (
     <>
       <Hero />
       <VelsPlus />
-       <FacilitiesGrid />
-       <FacilityHighlights />
-       
-       
+      <FacilitiesGrid />
+      <FacilityHighlights />
     </>
-    
   );
 }
