@@ -66,9 +66,8 @@ export default function FloatingActions() {
   return (
     <>
       {/* Apply Now Floating Button */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex items-center group">
+      {/* <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex items-center group">
 
-        {/* Hover Text */}
         <button
           onClick={() => setOpen(true)}
           className="bg-white text-black px-4 py-2 rounded-l-md shadow-md font-medium 
@@ -78,14 +77,13 @@ export default function FloatingActions() {
           Admission Open | Apply Now
         </button>
 
-        {/* Circle Icon */}
         <div
           onClick={() => setOpen(true)}
           className="bg-[#303395] text-white p-4 rounded-full shadow-lg flex items-center justify-center cursor-pointer"
         >
           <HiOutlineDocumentText size={24} />
         </div>
-      </div>
+      </div> */}
 
       {/* WhatsApp Button */}
       <a

@@ -46,7 +46,7 @@ export default function VelsPlusFooter() {
             </p>
 
             {/* SOCIAL */}
-            <div className="mt-8 flex gap-3">
+            {/* <div className="mt-8 flex gap-3">
               {[Facebook, Instagram, Youtube].map((Icon, i) => (
                 <Link
                   key={i}
@@ -56,7 +56,7 @@ export default function VelsPlusFooter() {
                   <Icon size={18} />
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* COURSES */}
@@ -86,9 +86,9 @@ export default function VelsPlusFooter() {
           <div>
             <h3 className="text-xl font-semibold">Locations</h3>
             <ul className="mt-5 space-y-4 text-sm text-white/90">
-              <li>Anna Nagar</li>
-              <li>Perambur</li>
-              <li>Velachery</li>
+              <li>Keelkattalai</li>
+              <li>Medavakkam</li>
+              <li>Mogappair</li>
               <li>Tambaram</li>
             </ul>
           </div>
@@ -109,16 +109,16 @@ export default function VelsPlusFooter() {
   </a>
 
   {/* Email */}
-  <a
+  {/* <a
     href="mailto:velsplusacademy@gmail.com"
     className="flex items-center gap-3 hover:text-cyan-300 transition"
   >
     <Mail size={18} />
     <span>velsplusacademy@gmail.com</span>
-  </a>
+  </a> */}
 
   {/* Location (Google Maps) */}
-  <a
+  {/* <a
     href="https://www.google.com/maps/search/?api=1&query=Anna+Nagar+Chennai+600040"
     target="_blank"
     rel="noopener noreferrer"
@@ -129,7 +129,7 @@ export default function VelsPlusFooter() {
       No. 42, Anna Nagar,<br />
       Chennai - 600040
     </span>
-  </a>
+  </a> */}
 
 </div>
           </div>

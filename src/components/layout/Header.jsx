@@ -116,12 +116,12 @@ export default function Header() {
             </div>
 
             {/* CONTACT */}
-            <Link
+            {/* <Link
               href="/contact"
               className="bg-white text-[#2f3192] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition"
             >
               Contact Us
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
