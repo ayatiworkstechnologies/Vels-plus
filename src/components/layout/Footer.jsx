@@ -39,11 +39,11 @@ export default function VelsPlusFooter() {
               </div>
             </div>
 
-            <p className="mt-7 max-w-md text-[15px] leading-8 text-white/90">
+            {/* <p className="mt-7 max-w-md text-[15px] leading-8 text-white/90">
               Vels Plus offers focused academic coaching for NEET, IIT-JEE,
               Foundations, and Tuitions. We help students build strong concepts,
               sharpen problem-solving skills, and achieve academic success.
-            </p>
+            </p> */}
 
             {/* SOCIAL */}
             {/* <div className="mt-8 flex gap-3">
@@ -65,7 +65,7 @@ export default function VelsPlusFooter() {
             <ul className="mt-5 space-y-4 text-sm text-white/90">
               <li><Link href="/neet">NEET / MEDICAL</Link></li>
               <li><Link href="/jee">IIT-JEE</Link></li>
-              <li><Link href="/tuitions">TUITIONS (SB & CBSE)</Link></li>
+              {/* <li><Link href="/tuitions">TUITIONS (SB & CBSE)</Link></li> */}
             </ul>
           </div>
 

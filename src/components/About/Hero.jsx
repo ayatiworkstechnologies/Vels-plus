@@ -16,7 +16,7 @@ export default function Hero() {
       {/* ===== Desktop Image ===== */}
       <div className="absolute inset-0 z-0 hidden md:block">
         <img
-          src="/assets/banner/about-web.png"
+          src="/assets/banner/about-web1.png"
           alt="Desktop banner"
           className="w-full h-full object-cover object-center"
         />
@@ -25,7 +25,7 @@ export default function Hero() {
       {/* ===== Mobile Image ===== */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img
-          src="/assets/banner/about-mob.png"
+          src="/assets/banner/about-mob1.png"
           alt="Mobile banner"
           className="w-full h-full object-cover object-center"
         />

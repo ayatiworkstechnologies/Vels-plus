@@ -84,8 +84,7 @@ const FounderSection = () => {
                 </h4>
                 <p className="text-md leading-relaxed text-gray-600 tracking-tight font-secondary font-light">
                   VELS Group of Schools, VELS Medical College, VELS University, 
-                  Chennai (VELS Institute of Science Technology and Advanced Studies - VISTAS), 
-                  VELS Foundations, NEET & JEE Coaching Centers.
+                  Chennai (VELS Institute of Science Technology and Advanced Studies - VISTAS).
                 </p>
               </div>
 

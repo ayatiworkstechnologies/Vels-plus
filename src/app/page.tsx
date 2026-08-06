@@ -45,8 +45,8 @@ export default function Home() {
       <NeetSection />
       <Gettingtovels />
       <Events />
-      <Blog />
-      <Testimonial />
+      {/* <Blog />
+      <Testimonial /> */}
     </>
   );
 }

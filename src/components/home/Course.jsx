@@ -15,13 +15,13 @@ const courses = [
     image: "/assets/iit.png",
     link: "/jee",
   },
-  {
-    id: 4,
-    title: "TUITIONS (SB & CBSE)",
-    desc: "Focused support for school board excellence.",
-    image: "/assets/cbse.png",
-    link: "/tuitions",
-  },
+  // {
+  //   id: 4,
+  //   title: "TUITIONS (SB & CBSE)",
+  //   desc: "Focused support for school board excellence.",
+  //   image: "/assets/cbse.png",
+  //   link: "/tuitions",
+  // },
 ];
 
 export default function Course() {

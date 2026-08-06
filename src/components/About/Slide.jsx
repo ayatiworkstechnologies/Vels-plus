@@ -61,7 +61,7 @@ export default function Slide() {
             {/* Mobile Counter */}
             <div className="mt-4 flex items-center justify-between lg:hidden">
               <div className="flex items-end leading-none">
-                <span className="text-[36px] font-light tracking-[-0.05em] text-black sm:text-[42px]">
+                <span className="text-[36px] font-light tracking-[-0.05em] text-black lg:text-[42px]">
                   {String(current + 1).padStart(2, "0")}
                 </span>
                 <span className="mx-1 text-[36px] font-light tracking-[-0.05em] text-black sm:text-[42px]">

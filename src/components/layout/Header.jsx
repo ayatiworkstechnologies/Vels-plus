@@ -26,11 +26,11 @@ export default function Header() {
 
             {/* LOGO */}
             <Link href="/" className="leading-none mr-4">
-              <div className="text-[20px] font-extrabold">
+              <div className="text-[60px] font-extrabold">
                 <span className="text-white">Vels </span>
                 <span className="text-cyan-400">Plus</span>
               </div>
-              <div className="text-[9px] font-semibold text-white/80">
+              <div className="text-[16px] font-semibold text-white/80">
                 JEE / NEET / CBSE
               </div>
             </Link>
